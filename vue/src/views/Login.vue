@@ -7,7 +7,7 @@
                 <p class="mt-2 text-center text-sm text-gray-600">
                 Ou
                 {{ ' ' }}
-                <a href="#" class="font-medium text-amber-600 hover:text-amber-500"> vous n'avez pas de compte ? </a>
+                <a href="/register" class="font-medium text-amber-600 hover:text-amber-500"> vous n'avez pas de compte ? </a>
                 </p>
             </div>
             <form class="mt-8 space-y-6" action="#" method="POST">
