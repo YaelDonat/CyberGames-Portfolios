@@ -81,14 +81,14 @@ export default{
             },
         })
 
-        const mustBeFormMsg = (value) => value.includes('formmsg');
+        const mustBeForm = (value) => value.includes('form');
 
         const rules = computed(()=>{
             return{
                 email : { 
                     required,
                     email,
-                    mustBeFormMsg:helpers.withMessage("E-mail invalide", mustBeFormMsg),
+                    mustBeForm:helpers.withMessage("E-mail invalide", mustBeForm),
                 },
                 password :{
                     password : { required, minLength:minLength(8) },

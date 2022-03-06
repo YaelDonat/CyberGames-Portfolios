@@ -90,6 +90,7 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Equipe', href: '#', current: false },
   { name: 'Projets', href: '#', current: false },
+  { name: 'Portfolios', href: '/portfolios', current: false },
   { name: 'Se connecter', href: '/login', current: false },
 ]
 const userNavigation = [
