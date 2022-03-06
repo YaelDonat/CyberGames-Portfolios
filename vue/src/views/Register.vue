@@ -19,21 +19,18 @@
                     <span class="text-sm text-red-600 font-semibold pl-5" v-if="this.v$.email.$error">
                         {{ this.v$.email.$errors[0].$message }}
                     </span>
-                    <span v-if="!this.v$.email.required">
-                        un email est requis.
-                    </span>
                 </div>
                 <div>
                     <label for="password" class="sr-only">Mot de passe</label>
                     <input v-model="state.password.password"    id="password" name="password" type="password" autocomplete="current-password" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-amber-500 focus:border-amber-500 focus:z-10 sm:text-sm" placeholder="Mot de passe" />
-                    <span v-if="this.v$.password.password.$error">
+                    <span class="text-sm text-red-600 font-semibold pl-5" v-if="this.v$.password.password.$error">
                         {{ this.v$.password.password.$errors[0].$message }}
                     </span>
                 </div>
                 <div>
                     <label for="passwordConfirm" class="sr-only">Confirmation mot de passe</label>
                     <input v-model="state.password.confirm" id="passwordConfirm" name="password" type="password" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 focus:z-10 sm:text-sm" placeholder="Confirmation mot de passe" />
-                    <span v-if="this.v$.password.confirm.$error">
+                    <span class="text-sm text-red-600 font-semibold pl-5" v-if="this.v$.password.confirm.$error">
                         {{ this.v$.password.confirm.$errors[0].$message }}
                     </span>
                 </div>
@@ -86,13 +83,17 @@ export default{
         const rules = computed(()=>{
             return{
                 email : { 
-                    required,
-                    email,
-                    mustBeForm:helpers.withMessage("E-mail invalide", mustBeForm),
+                    required :helpers.withMessage("Un email est requis", required),
+                    email:helpers.withMessage("E-mail invalide", email),
                 },
                 password :{
-                    password : { required, minLength:minLength(8) },
-                    confirm : { required, sameAs:sameAs(state.password.password) },
+                    password : {
+                         required:helpers.withMessage("Un mot de passe est requis",required),
+                         minLength:minLength(8),
+                          },
+                    confirm : { 
+                        required:helpers.withMessage("Un mot de passe est requis",required),
+                        sameAs:sameAs(state.password.password) },
                 },
             }
         })
