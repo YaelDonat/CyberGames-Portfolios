@@ -89,11 +89,11 @@ export default{
                 password :{
                     password : {
                          required:helpers.withMessage("Un mot de passe est requis",required),
-                         minLength:minLength(8),
+                         minLength:helpers.withMessage("Minimum 8 caractères",minLength(8)),
                           },
                     confirm : { 
                         required:helpers.withMessage("Un mot de passe est requis",required),
-                        sameAs:sameAs(state.password.password) },
+                        sameAs:helpers.withMessage("Les mots de passes doivent être identiques  ",sameAs(state.password.password)) },
                 },
             }
         })

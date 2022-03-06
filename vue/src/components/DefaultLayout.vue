@@ -82,7 +82,6 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const user = {
   name: 'Usertest',
-  email: 'Daveloper@mail.fr',
   imageUrl:
     'https://ds.static.rtbf.be/article/image/370x208/2/8/b/a5fdfa672284da6bf4f4326e2b3698bd-1495114704.jpg',
 }
