@@ -54,6 +54,20 @@
                             Système de gestion de contenu - PrestaShop, Wix,
                             WordPress
                         </li>
+                        <br>
+                        <li>
+                            Français - Natif
+                        </li>
+                        <li>
+                            Anglais - B2+
+                        </li>
+                        <li>
+                            Espagnol - B1
+                        </li>
+                        <li>
+                            Allemand - A1
+                        </li>
+
                     </ul>
                 </section>
 
