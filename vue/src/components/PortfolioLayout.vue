@@ -1,11 +1,17 @@
 <template>
-  <div class="min-h-full dark:bg-gray-800">
+  <div class="min-h-full dark:bg-gray-800" :class="isDark ? 'dark':''">
     <Disclosure as="nav" class="bg-violet-500" v-slot="{ open }">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-center h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
               <img class="h-8 w-8" src="../assets/images/cybericon.svg" alt="Workflow" />
+            </div>
+            <div class="flex-shrink-0 ml-5">
+              <Button @click="isDark=!isDark" class="bg-gray-800 hover:bg-opacity-40 rounded-full" >
+                <fa v-if="isDark" :icon="['fas','sun']" />
+                <fa v-else :icon="['fas','moon']" />
+              </Button>
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-center space-x-4">
@@ -70,8 +76,7 @@
 <script>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
-import Button from '../components/reusable/Button.vue';
-
+import Button from '../components/reusable/Button.vue'
 
 const user = [
   {name: 'Axel'},
@@ -100,6 +105,11 @@ export default{
     BellIcon,
     MenuIcon,
     XIcon,
+  },
+  data(){
+    return{
+      isDark:true,
+    }
   },
   setup(){
     return{
