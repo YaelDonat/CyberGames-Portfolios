@@ -78,8 +78,8 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
-                                alt="image"
+                                src="../assets/images/minimalme.jpg"
+                                alt="yael/jpg"
                                 class="w-full"
                             />
                             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -93,9 +93,11 @@
                                 <p
                                     class="text-base text-body-color leading-relaxed mb-7"
                                 >
-                                    Lorem ipsum dolor sit amet pretium
-                                    consectetur adipiscing elit. Lorem
-                                    consectetur adipiscing elit.
+                                    Développeur full-stack junior.<br>
+                                    Back : Laravel / Symfony/ NodeJs / ExpressJs<br>
+                                    Front : Vue3, Tailwindcss<br>
+                                    Php, Javascript, C#, Java<br>
+                                    MySQL, MongoDB
                                 </p>
                                 <router-link to="/portfolios/yael">
                                     <a
