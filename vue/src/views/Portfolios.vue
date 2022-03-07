@@ -1,14 +1,14 @@
 <template>
-    <header class="bg-white shadow">
+    <header class="bg-gray-100 dark:bg-gray-800">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-gray-900">
+            <h1 class="text-3xl font-bold text-gray-900 dark:text-white">
                 Portfolios de l'équipe
             </h1>
         </div>
     </header>
     <main>
         <!-- ====== Cards Section Start -->
-        <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+        <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-gray-100 dark:bg-gray-800">
             <div class="grid-cols-4">
                 <div class="flex">
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">

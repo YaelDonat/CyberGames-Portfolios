@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-full" :class="isDark ? 'dark':''">
-    <Disclosure as="nav" class="bg-amber-500" v-slot="{ open }">
+    <Disclosure as="nav" class="bg-amber-500 dark:bg-violet-500" v-slot="{ open }">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
@@ -8,14 +8,14 @@
               <img class="h-8 w-8" src="../assets/images/cybericon.svg" alt="Workflow" />
             </div>
             <div class="flex-shrink-0 ml-5">
-              <Button @click="isDark=!isDark" class="bg-gray-800 hover:bg-opacity-40 rounded-full" >
+              <Button @click="isDark=!isDark" class="bg-gray-700 dark:bg-amber-500 hover:bg-opacity-40 rounded-full" >
                 <fa v-if="isDark" :icon="['fas','sun']" />
                 <fa v-else :icon="['fas','moon']" />
               </Button>
             </div>
             <div class="hidden md:block">
               <div class="ml-10 flex items-baseline space-x-4">
-                <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-amber-900 text-white' : 'text-white hover:bg-amber-700 hover:text-white', 'px-3 py-2 rounded-md text-md font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+                <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-amber-900 dark:bg-violet-900 text-white' : 'text-white hover:bg-amber-700 dark:hover:bg-violet-700 hover:text-white', 'px-3 py-2 rounded-md text-md font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
               </div>
             </div>
           </div>
