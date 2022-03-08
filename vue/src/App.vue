@@ -8,6 +8,6 @@
   <router-view></router-view>
 </template>
 
-<style>
+<style scoped lang="scss">
 
 </style>

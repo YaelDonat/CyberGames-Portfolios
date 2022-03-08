@@ -8,7 +8,7 @@
               <img class="h-8 w-8" src="../assets/images/cybericon.svg" alt="Workflow" />
             </div>
             <div class="flex-shrink-0 ml-5">
-              <Button @click="isDark=!isDark" class="bg-gray-800 hover:bg-opacity-40 rounded-full" >
+              <Button @click="isDark=!isDark" class="bg-gray-700 dark:bg-amber-500 hover:bg-opacity-40 rounded-full" >
                 <fa v-if="isDark" :icon="['fas','sun']" />
                 <fa v-else :icon="['fas','moon']" />
               </Button>
@@ -54,8 +54,6 @@
         </div>
         <div class="pt-4 pb-3 border-t border-gray-700">
           <div class="flex items-center px-5">
-            <div class="flex-shrink-0">
-            </div>
             <button type="button" class="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span class="sr-only">View notifications</span>
               <BellIcon class="h-6 w-6" aria-hidden="true" />
@@ -66,9 +64,10 @@
     </Disclosure>
 
     <!-- Content of the view routed -->
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <router-view></router-view>
-    </div>
+
+      <div class="max-w-screen mx-auto">
+        <router-view></router-view>
+      </div>
     
   </div>
 </template>
@@ -87,7 +86,7 @@ const user = [
 const navigation = [
   { name: 'Axel', href: '/portfolios/axel', current: false },
   { name: 'Eric', href: '/portfolios/eric', current: false },
-  { name: 'Home', href: '/', current: true },
+  { name: 'Portfolios', href: '/portfolios', current: true },
   { name: 'Yael', href: '/portfolios/yael', current: false },
   { name: 'Anojan', href: '/portfolios/anojan', current: false },
 ]

@@ -46,11 +46,11 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                                src="https://i.ibb.co/rmd45J1/Hehe.png"
                                 alt="image"
                                 class="w-full"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center max-h-fit">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -61,9 +61,7 @@
                                 <p
                                     class="text-base text-body-color leading-relaxed mb-7"
                                 >
-                                    Lorem ipsum dolor sit amet pretium
-                                    consectetur adipiscing elit. Lorem
-                                    consectetur adipiscing elit.
+                                    Développeur full-stack junior<br>
                                 </p>
                                 <router-link to="/portfolios/eric">
                                     <a
@@ -82,16 +80,16 @@
                                 alt="yael/jpg"
                                 class="w-full"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')] dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
                                 <h3>
                                     <a
-                                        class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                                        class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
                                     >
                                         Portfolio de Yaël
                                     </a>
                                 </h3>
                                 <p
-                                    class="text-base text-body-color leading-relaxed mb-7"
+                                    class="text-base text-body-color bg-white rounded-full  bg-opacity-20 hover:bg-opacity-60 leading-relaxed mb-7"
                                 >
                                     Développeur full-stack junior.<br>
                                     Back : Laravel / Symfony/ NodeJs / ExpressJs<br>
@@ -101,7 +99,7 @@
                                 </p>
                                 <router-link to="/portfolios/yael">
                                     <a
-                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-primary hover:bg-primary hover:text-green-500 transition"
+                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-white text-body-color font-medium hover:border-violet-500 hover:bg-white hover:text-black hover:bg-opacity-60 transition"
                                     >
                                         Voir en détail
                                     </a>
