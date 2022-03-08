@@ -8,7 +8,7 @@
               <img class="h-8 w-8" src="../assets/images/cybericon.svg" alt="Workflow" />
             </div>
             <div class="flex-shrink-0 ml-5">
-              <Button @click="isDark=!isDark" class="bg-gray-800 hover:bg-opacity-40 rounded-full" >
+              <Button @click="isDark=!isDark" class="bg-gray-700 dark:bg-amber-500 hover:bg-opacity-40 rounded-full" >
                 <fa v-if="isDark" :icon="['fas','sun']" />
                 <fa v-else :icon="['fas','moon']" />
               </Button>
@@ -66,9 +66,10 @@
     </Disclosure>
 
     <!-- Content of the view routed -->
-    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-      <router-view></router-view>
-    </div>
+
+      <div class="max-w-screen mx-auto">
+        <router-view></router-view>
+      </div>
     
   </div>
 </template>
