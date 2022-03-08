@@ -61,9 +61,7 @@
                                 <p
                                     class="text-base text-body-color leading-relaxed mb-7"
                                 >
-                                    Lorem ipsum dolor sit amet pretium
-                                    consectetur adipiscing elit. Lorem
-                                    consectetur adipiscing elit.
+                                    Développeur full-stack junior<br>
                                 </p>
                                 <router-link to="/portfolios/eric">
                                     <a
