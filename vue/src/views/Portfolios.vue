@@ -12,13 +12,13 @@
             <div class="grid-cols-4">
                 <div class="flex">
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                        <div class="bg-white dark:bg-gray-500 rounded-lg overflow-hidden mb-10">
+                        <div class="bg-white dark:bg-white-100 rounded-lg overflow-hidden mb-10">
                             <img
                                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
                                 alt="image"
-                                class="w-full"
+                                class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center h-[300px] max-h-[300px]">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -48,9 +48,9 @@
                             <img
                                 src="https://i.ibb.co/rmd45J1/Hehe.png"
                                 alt="image"
-                                class="w-full"
+                                class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center max-h-fit">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center h-[300px] max-h-[300px]">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -78,9 +78,9 @@
                             <img
                                 src="../assets/images/minimalme.jpg"
                                 alt="yael/jpg"
-                                class="w-full"
+                                class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')] dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')] dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover h-[300px] max-h-[300px]">
                                 <h3>
                                     <a
                                         class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -112,9 +112,9 @@
                             <img
                                 src="https://i.ibb.co/BKt77Q0/Minimalist-Wallpaper.png"
                                 alt="image"
-                                class="w-full"
+                                class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center h-[300px] max-h-[300px]">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
