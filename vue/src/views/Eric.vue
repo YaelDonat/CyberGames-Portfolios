@@ -5,10 +5,12 @@
         >
             <div class="md:w-1/3 w-full">
                 <header>
-                    <img src="" alt="Myself" class="ml-12" />
-                    <img src="" alt="Logo" class="mt-4 max-w-sm w-full" />
+                    <div>
+              <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-tl-lg ring-4 ring-green-600 dark:ring-emerald-200 shadow-lg shadow-green-500/50 dark:shadow-emerald-200/50 object-cover mb-4"  src='https://i.ibb.co/1Z4GDK2/1646735436170.jpg' alt="photo Eric">
+            </div>
+                    <img src="https://i.ibb.co/1RxgX6y/eric-logo.png" alt="logo nom" class="mt-1 max-w-sm w-full" />
                 </header>
-                <section class="mt-16">
+                <section class="mt-6">
                     <h3
                         class="uppercase text-zinc-800 dark:text-zinc-100 font-medium text-3xl"
                     >
@@ -227,8 +229,7 @@
 
                     <div class="mt-8">
                         <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
-                            Création d'un jeu vidéo + site internet (celui-ci
-                            mdr)
+                            Création d'un jeu vidéo + site internet (celui-ci)
                         </h4>
                         <p class="text-zinc-900 dark:text-zinc-100 mt-2">
                             Avec toute l'équipe, nous sommes en train de créer
