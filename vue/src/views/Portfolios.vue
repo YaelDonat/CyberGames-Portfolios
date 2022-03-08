@@ -46,11 +46,11 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                                src="https://i.ibb.co/rmd45J1/Hehe.png"
                                 alt="image"
                                 class="w-full"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center max-h-fit">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -80,7 +80,11 @@
                                 alt="yael/jpg"
                                 class="w-full"
                             />
+<<<<<<< HEAD
                             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
+=======
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center max-h-fit">
+>>>>>>> 599d0aedca2d1880ce798c817f874ee6cac84906
                                 <h3>
                                     <a
                                         class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
