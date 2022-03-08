@@ -80,11 +80,7 @@
                                 alt="yael/jpg"
                                 class="w-full"
                             />
-<<<<<<< HEAD
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
-=======
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center max-h-fit">
->>>>>>> 599d0aedca2d1880ce798c817f874ee6cac84906
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')] dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
                                 <h3>
                                     <a
                                         class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -93,7 +89,7 @@
                                     </a>
                                 </h3>
                                 <p
-                                    class="text-base text-body-color bg-white rounded-full bg-opacity-20 hover:bg-opacity-60 leading-relaxed mb-7"
+                                    class="text-base text-body-color bg-white rounded-full  bg-opacity-20 hover:bg-opacity-60 leading-relaxed mb-7"
                                 >
                                     Développeur full-stack junior.<br>
                                     Back : Laravel / Symfony/ NodeJs / ExpressJs<br>
