@@ -80,16 +80,16 @@
                                 alt="yael/jpg"
                                 class="w-full"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover">
                                 <h3>
                                     <a
-                                        class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                                        class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
                                     >
                                         Portfolio de Yaël
                                     </a>
                                 </h3>
                                 <p
-                                    class="text-base text-body-color leading-relaxed mb-7"
+                                    class="text-base text-body-color bg-white rounded-full bg-opacity-20 hover:bg-opacity-60 leading-relaxed mb-7"
                                 >
                                     Développeur full-stack junior.<br>
                                     Back : Laravel / Symfony/ NodeJs / ExpressJs<br>
@@ -99,7 +99,7 @@
                                 </p>
                                 <router-link to="/portfolios/yael">
                                     <a
-                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-primary hover:bg-primary hover:text-green-500 transition"
+                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-white text-body-color font-medium hover:border-violet-500 hover:bg-white hover:text-black hover:bg-opacity-60 transition"
                                     >
                                         Voir en détail
                                     </a>
