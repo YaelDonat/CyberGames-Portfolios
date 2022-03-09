@@ -1,5 +1,29 @@
 <template>
   <div class=" bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')]  dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover ">
+  
+  <p class="text-center text-white text-4xl pt-10">Mes projets</p>
+  <div class="h-1/2 bg-transparent flex items-center justify-center">
+    <div class="grid grid-cols-4 gap-10 px-16 mb-[100px]  mt-[50px]">
+      <!-- Items -->
+      <div class="flex flex-col gap-1" v-for="item in getAllProjects" :key="item.id">
+        <!-- Image -->
+        <a href="" class="bg-violet-500 bg-opacity-10">
+          <img :src="item.mainPicture" class="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
+        </a>
+        <!-- Games Title -->
+        <a href="#" class="hover:text-purple-500 text-gray-200 font-semibold"> {{item.title}} </a>
+        <!-- Viewers -->
+        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-if="item.done"> Terminé : Oui </a>
+        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-else> Terminé : Non </a>
+        <!-- Category Tags -->
+        <div class="flex flex-row flex-wrap gap-2">
+          <a href="#" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> {{item.poste}} </a>
+          <a :href="item.link" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> Lien </a>
+        </div>      
+      </div>
+    </div>
+  </div>
+    
     <div class="p-20 min-h-screen max-w-7xl mx-auto">
         <div class="bg-white shadow-xl rounded grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3">
           <!-- Left section -->
@@ -305,9 +329,15 @@
 </template>
 
 <script>
-
+import {computed} from 'vue'
 export default{
-    name:"Yael",   
+    name:"Yael",
+    computed:{
+      getAllProjects(){  
+      return this.$store.state.portfolioY
+      }
+    },
+
 }
 </script>
 
