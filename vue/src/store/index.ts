@@ -24,6 +24,16 @@ const store = createStore({
                 , mainPicture: '../src/assets/images/logo.png', poste: 'Développeur Fullstack', link: '#', images: ['', ''], outils : ['Vue3Js','Laravel','Tailwindcss','MySQL'],duree : ''
             },
         ],
+        userEric: {
+            data: { nameE: 'Eric'},
+            token:null,
+        },
+        portfolioE:[
+            {
+
+            }
+
+        ]
     },
     getters: {},
     actions: {},
