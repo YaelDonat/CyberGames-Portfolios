@@ -7,23 +7,58 @@
       <!-- Items -->
       <div class="flex flex-col gap-1" v-for="item in getAllProjects" :key="item.id">
         <!-- Image -->
-        <a href="" class="bg-violet-500 bg-opacity-10">
+        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-white bg-opacity-30 hover:bg-opacity-80 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] p-5">
           <img :src="item.mainPicture" class="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
-        </a>
-        <!-- Games Title -->
+        </button>
+        <!-- Title -->
         <a href="#" class="hover:text-purple-500 text-gray-200 font-semibold"> {{item.title}} </a>
-        <!-- Viewers -->
+        <!-- Done ? -->
         <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-if="item.done"> Terminé : Oui </a>
         <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-else> Terminé : Non </a>
-        <!-- Category Tags -->
+        <!-- Poste + link -->
         <div class="flex flex-row flex-wrap gap-2">
           <a href="#" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> {{item.poste}} </a>
           <a :href="item.link" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> Lien </a>
-        </div>      
+        </div> 
+        <!-- Start Modal -->
+        <div v-show="isOpen[0]===item.show"  id="modal" class="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4" :class="{[visibility] : isOpen[1]}">
+          <div class="relative top-40 mx-auto shadow-lg rounded-md bg-white max-w-[80%] min-h-auto max-h-scren">
+
+              <!-- Modal header -->
+              <div class="flex justify-between items-center bg-violet-500 text-white text-xl rounded-t-md px-4 py-2">
+                  <h3>{{item.title}}</h3>
+                  <button class="text-2xl hover:text-gray-300" @Click="isOpen[1]=true"><fa :icon="['fa','circle-xmark']"/></button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="max-h-[50%] overflow-y-scroll p-4">
+                  <p>{{item.description}}<br></p>
+                  <div class="grid grid-cols-3 gap-4 font-semibold">
+                        <img v-for="img in item.images" :src="img" class="cursor-pointer" :class="{[full]:toggler}" :alt="img" @Click="this.toggler = !this.toggler"/>
+                  </div>
+                  <br><p class="font-semibold">Durée du projet : {{item.duree}} <br>
+                   Outils utilisés :</p>
+                  <div class="grid grid-cols-8 gap-2">
+                    <div v-for="outil in item.outils" class="text-sm text-red-500 font-semibold  flex flex-col gap-1">
+                      {{outil}}
+                    </div>
+                    <a :href="item.link" class="text-blue-500 hover:text-blue-800"> Lien du projet </a>
+                  </div>
+              </div>
+              
+
+            <!-- Modal footer -->
+            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4 max-h-[10%]"> 
+              <button class="bg-violet-500 text-white px-4 py-2 rounded-md hover:bg-violet-700 transition" @Click="isOpen[1]=true" >Fermer</button>
+            </div>
+          </div>
+       </div> 
+       <!-- End Modal -->
       </div>
     </div>
-  </div>
+  </div> 
     
+    <!-- CV -->
     <div class="p-20 min-h-screen max-w-7xl mx-auto">
         <div class="bg-white shadow-xl rounded grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3">
           <!-- Left section -->
@@ -337,7 +372,14 @@ export default{
       return this.$store.state.portfolioY
       }
     },
-
+    data(){
+      return{
+        isOpen:['',true],
+        visibility : 'hidden',
+        full : 'col-span-full',
+        toggler : false,
+      }
+    },
 }
 </script>
 
