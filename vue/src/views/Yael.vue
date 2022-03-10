@@ -7,7 +7,7 @@
       <!-- Items -->
       <div class="flex flex-col gap-1" v-for="item in getAllProjects" :key="item.id">
         <!-- Image -->
-        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-violet-500 bg-opacity-10">
+        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-white bg-opacity-30 hover:bg-opacity-80 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] p-5">
           <img :src="item.mainPicture" class="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
         </button>
         <!-- Title -->
@@ -36,8 +36,8 @@
                   <div class="grid grid-cols-3 gap-4 font-semibold">
                         <img v-for="img in item.images" :src="img" class="cursor-pointer" :class="{[full]:toggler}" :alt="img" @Click="this.toggler = !this.toggler"/>
                   </div>
-                  <br>
-                  Outils utilisés :
+                  <br><p class="font-semibold">Durée du projet : {{item.duree}} <br>
+                   Outils utilisés :</p>
                   <div class="grid grid-cols-8 gap-2">
                     <div v-for="outil in item.outils" class="text-sm text-red-500 font-semibold  flex flex-col gap-1">
                       {{outil}}
@@ -48,8 +48,8 @@
               
 
             <!-- Modal footer -->
-            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4 max-h-[10%]">
-                <button class="bg-violet-500 text-white px-4 py-2 rounded-md hover:bg-violet-700 transition" @Click="isOpen[1]=true" >Fermer</button>
+            <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4 max-h-[10%]"> 
+              <button class="bg-violet-500 text-white px-4 py-2 rounded-md hover:bg-violet-700 transition" @Click="isOpen[1]=true" >Fermer</button>
             </div>
           </div>
        </div> 
