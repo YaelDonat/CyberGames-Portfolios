@@ -6,9 +6,17 @@
             <div class="md:w-1/3 w-full">
                 <header>
                     <div>
-              <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-tl-lg ring-4 ring-green-600 dark:ring-emerald-200 shadow-lg shadow-green-500/50 dark:shadow-emerald-200/50 object-cover mb-4"  src='https://i.ibb.co/1Z4GDK2/1646735436170.jpg' alt="photo Eric">
-            </div>
-                    <img src="https://i.ibb.co/1RxgX6y/eric-logo.png" alt="logo nom" class="mt-1 max-w-sm w-full" />
+                        <img
+                            class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-tl-lg ring-4 ring-green-600 dark:ring-emerald-200 shadow-lg shadow-green-500/50 dark:shadow-emerald-200/50 object-cover mb-4"
+                            src="https://i.ibb.co/1Z4GDK2/1646735436170.jpg"
+                            alt="photo Eric"
+                        />
+                    </div>
+                    <img
+                        src="https://i.ibb.co/1RxgX6y/eric-logo.png"
+                        alt="logo nom"
+                        class="mt-1 max-w-sm w-full"
+                    />
                 </header>
                 <section class="mt-6">
                     <h3
@@ -16,7 +24,9 @@
                     >
                         Objectifs de carrière
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
                     <p class="text-zinc-900 dark:text-zinc-100">
                         Je suis très motivé à apprendre davantage sur les
                         langages de programmations. Pour ma carrière
@@ -33,7 +43,9 @@
                     >
                         Compétences
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
                     <ul
                         class="text-zinc-900 dark:text-zinc-100 list-disc list-inside"
                     >
@@ -68,7 +80,9 @@
                     >
                         Contacts
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
                     <div class="text-zinc-900 dark:text-zinc-100">
                         <a
                             href="https://linkedin.com/in/eric-barnet-0210941b9"
@@ -104,13 +118,19 @@
                     >
                         Expériences professionnelles
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             Apprenti développeur web
                         </h4>
-                        <h5 class="text-xl text-green-600 dark:text-emerald-200">
+                        <h5
+                            class="text-xl text-green-600 dark:text-emerald-200"
+                        >
                             <a
                                 href="https://marchesaintpierre.com"
                                 class="hover:underline"
@@ -133,10 +153,14 @@
                     </div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             Stagiaire développeur web
                         </h4>
-                        <h5 class="text-xl text-green-600 dark:text-emerald-200">
+                        <h5
+                            class="text-xl text-green-600 dark:text-emerald-200"
+                        >
                             <a
                                 href="http://budokanthiais.fr"
                                 class="hover:underline"
@@ -168,17 +192,23 @@
                     >
                         Formations
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             <a
                                 href="https://www.francecompetences.fr/recherche/rncp/31678/"
                                 class="hover:underline"
                                 >BAC +3: TP niv.6 - CDA</a
                             >
                         </h4>
-                        <h5 class="text-xl text-green-600 dark:text-emerald-200">
+                        <h5
+                            class="text-xl text-green-600 dark:text-emerald-200"
+                        >
                             <a
                                 href="https://cfa-insta.fr/"
                                 class="hover:underline"
@@ -195,14 +225,18 @@
                     </div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             <a
                                 href="https://www.onisep.fr/Ressources/Univers-Formation/Formations/Post-bac/bts-services-informatiques-aux-organisations-option-b-solutions-logicielles-et-applications-metiers"
                                 class="hover:underline"
                                 >BAC +2: BTS SIO opt. SLAM</a
                             >
                         </h4>
-                        <h5 class="text-xl text-green-600 dark:text-emerald-200">
+                        <h5
+                            class="text-xl text-green-600 dark:text-emerald-200"
+                        >
                             <a
                                 href="https://www.lyceedecachan.fr/"
                                 class="hover:underline"
@@ -225,10 +259,14 @@
                     >
                         Projet en cours
                     </h3>
-                    <div class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"></div>
+                    <div
+                        class="h-1 bg-green-600 dark:bg-emerald-200 w-48 my-4"
+                    ></div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             Création d'un jeu vidéo + site internet (celui-ci)
                         </h4>
                         <p class="text-zinc-900 dark:text-zinc-100 mt-2">
@@ -242,7 +280,9 @@
                     </div>
 
                     <div class="mt-8">
-                        <h4 class="font-medium text-green-600 dark:text-emerald-200 text-2xl">
+                        <h4
+                            class="font-medium text-green-600 dark:text-emerald-200 text-2xl"
+                        >
                             <a>Refonte complet de mon site personnel</a>
                         </h4>
                         <p class="text-zinc-900 dark:text-zinc-100 mt-2">
@@ -257,53 +297,89 @@
                         </p>
                     </div>
                 </section>
-                <br>
+                <br />
 
-<!-- Button trigger modal -->
-<button type="button"
-  class="inline-block px-6 py-2.5 bg-green-600 dark:bg-emerald-200 text-white dark:text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 dark:hover:bg-emerald-300 hover:shadow-lg focus:bg-green-700 dark:focus:bg-emerald-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 dark:active:bg-emerald-500 active:shadow-lg transition duration-150 ease-in-out"
-    @Click="isOpen=true">
-  Voir tout les projets
-</button>
+                <!-- Item start -->
+                <div
+                    class="flex flex-col gap-1"
+                    v-for="item in getAllProjects"
+                    :key="item.id"
+                >
+                <!-- Button trigger modal start -->
+                    <button
+                        type="button"
+                        class="inline-block px-6 py-2.5 bg-green-600 dark:bg-emerald-200 text-white dark:text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 dark:hover:bg-emerald-300 hover:shadow-lg focus:bg-green-700 dark:focus:bg-emerald-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 dark:active:bg-emerald-500 active:shadow-lg transition duration-150 ease-in-out"
+                        @Click="isOpen = true"
+                    >
+                        Voir tout les projets
+                    </button>
+                <!-- Button trigger modal end -->
+                <!-- Modal component -->
+                    <div
+                        v-show="isOpen"
+                        id="modal"
+                        class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full backdrop-blur-md bg-transparent/90"
+                    >
+                        <div class="bg-white rounded-lg w-1/2">
+                            <!-- Modal header start-->
+                            <div
+                                class="flex justify-between items-center bg-green-600 dark:bg-emerald-200 text-white dark:text-black text-xl rounded-t-md px-4 py-2"
+                            >
+                                <h3>Mes projets</h3>
 
-<!-- component -->
-<div v-show="isOpen" id="modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full backdrop-blur-md bg-transparent/90">
-  <div class="bg-white rounded-lg w-1/2">
-  <!-- Modal header -->
-        <div class="flex justify-between items-center bg-green-600 dark:bg-emerald-200 text-white dark:text-black text-xl rounded-t-md px-4 py-2">
-            <h3>Mes projets</h3>
-            <button @Click="isOpen=!isOpen"><fa :icon="['fa', 'circle-xmark']"/></button>
-        </div>
-        <!-- Modal body -->
-        <div class="max-h-48 overflow-y-scroll p-4">
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-            <p>Scrollable modal body</p>
-        </div>
-        <!-- Modal footer -->
-        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-            <button class="bg-green-600 dark:bg-emerald-200 text-white dark:text-black px-4 py-2 rounded-md hover:bg-green-700 dark:hover:bg-emerald-300 transition" @Click="isOpen=!isOpen">Fermer</button>
-        </div>
-  </div>
-</div>
+                                <button @Click="isOpen = !isOpen">
+                                    <fa :icon="['fa', 'circle-xmark']" />
+                                </button>
+                            </div>
+                            <!-- Modal header end -->
+                            <!-- Modal body start -->
+                            <div class="max-h-48 overflow-y-scroll p-4">
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                                <p>Scrollable modal body</p>
+                            </div>
+                            <!-- Modal body end -->
+                            <!-- Modal footer start -->
+                            <div
+                                class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4"
+                            >
+                                <button
+                                    class="bg-green-600 dark:bg-emerald-200 text-white dark:text-black px-4 py-2 rounded-md hover:bg-green-700 dark:hover:bg-emerald-300 transition"
+                                    @Click="isOpen = !isOpen"
+                                >
+                                    Fermer
+                                </button>
+                            </div>
+                            <!-- Modal footer end -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Item end -->
+                <!-- Modal component end -->
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { computed } from "vue";
 export default {
     name: "Eric",
-    data(){
-        return{isOpen:''};
-    }
+    computed: {
+        getAllProjects() {
+            return this.$store.state.portfolioE;
+        },
+    },
+    data() {
+        return { isOpen: "" };
+    },
 };
 </script>
 
