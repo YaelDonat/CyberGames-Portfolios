@@ -1,13 +1,13 @@
 <template>
   <div class=" bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')]  dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover ">
-  
+
   <p class="text-center text-white text-4xl pt-10">Mes projets</p>
   <div class="h-1/2 bg-transparent flex items-center justify-center">
-    <div class="grid grid-cols-4 gap-10 px-16 mb-[100px]  mt-[50px]">
+    <div class="grid grid-cols-4 gap-10 px-16 mb-[10px]  mt-[50px]">
       <!-- Items -->
       <div class="flex flex-col gap-1" v-for="item in getAllProjects" :key="item.id">
         <!-- Image -->
-        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-white bg-opacity-30 hover:bg-opacity-80 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] p-5">
+        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-black bg-opacity-20 hover:bg-opacity-50 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] p-5">
           <img :src="item.mainPicture" class="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
         </button>
         <!-- Title -->
@@ -32,7 +32,7 @@
 
               <!-- Modal body -->
               <div class="max-h-[50%] overflow-y-scroll p-4">
-                  <p>{{item.description}}<br></p>
+                  <p class="py-[2%]" >{{item.description}}</p>
                   <div class="grid grid-cols-3 gap-4 font-semibold">
                         <img v-for="img in item.images" :src="img" class="cursor-pointer" :class="{[full]:toggler}" :alt="img" @Click="this.toggler = !this.toggler"/>
                   </div>
@@ -57,9 +57,9 @@
       </div>
     </div>
   </div> 
-    
     <!-- CV -->
-    <div class="p-20 min-h-screen max-w-7xl mx-auto">
+    <p class="text-center text-white text-4xl pt-10">Mon CV</p>
+    <div class="px-20 pt-8 min-h-screen max-w-7xl mx-auto">
         <div class="bg-white shadow-xl rounded grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3">
           <!-- Left section -->
           <div class="row-span-1 col-span-1 space-y-4 pt-20 bg-gradient-to-b from-emerald-200 to-violet-200 dark:from-emerald-200 dark:to-violet-400">
