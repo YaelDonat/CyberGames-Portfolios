@@ -236,7 +236,7 @@
                             un petit jeu sous
                             <a href="https://unity.com/fr" class="underline"
                                 >Unity</a
-                            >. Pour ce faire, un site sera aussi nécessaire afin
+                            >. Pour ce faire, un site sera nécessaire afin
                             d'accueillir le jeu une fois que tout sera terminé.
                         </p>
                     </div>
@@ -267,14 +267,13 @@
 </button>
 
 <!-- component -->
-<div v-show="isOpen" id="modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-800">
+<div v-show="isOpen" id="modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full backdrop-blur-md bg-transparent/90">
   <div class="bg-white rounded-lg w-1/2">
   <!-- Modal header -->
-        <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-            <h3>Modal header</h3>
-            <button @Click="isOpen=!isOpen">X</button>
+        <div class="flex justify-between items-center bg-green-600 dark:bg-emerald-200 text-white dark:text-black text-xl rounded-t-md px-4 py-2">
+            <h3>Mes projets</h3>
+            <button @Click="isOpen=!isOpen"><fa :icon="['fa', 'circle-xmark']"/></button>
         </div>
-
         <!-- Modal body -->
         <div class="max-h-48 overflow-y-scroll p-4">
             <p>Scrollable modal body</p>
@@ -288,10 +287,9 @@
             <p>Scrollable modal body</p>
             <p>Scrollable modal body</p>
         </div>
-
         <!-- Modal footer -->
         <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" @Click="isOpen=!isOpen">Close</button>
+            <button class="bg-green-600 dark:bg-emerald-200 text-white dark:text-black px-4 py-2 rounded-md hover:bg-green-700 dark:hover:bg-emerald-300 transition" @Click="isOpen=!isOpen">Fermer</button>
         </div>
   </div>
 </div>
