@@ -257,6 +257,44 @@
                         </p>
                     </div>
                 </section>
+                <br>
+
+<!-- Button trigger modal -->
+<button type="button"
+  class="inline-block px-6 py-2.5 bg-green-600 dark:bg-emerald-200 text-white dark:text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 dark:hover:bg-emerald-300 hover:shadow-lg focus:bg-green-700 dark:focus:bg-emerald-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 dark:active:bg-emerald-500 active:shadow-lg transition duration-150 ease-in-out"
+    @Click="isOpen=true">
+  Voir tout les projets
+</button>
+
+<!-- component -->
+<div v-show="isOpen" id="modal" class="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-800">
+  <div class="bg-white rounded-lg w-1/2">
+  <!-- Modal header -->
+        <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+            <h3>Modal header</h3>
+            <button @Click="isOpen=!isOpen">X</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="max-h-48 overflow-y-scroll p-4">
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+            <p>Scrollable modal body</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" @Click="isOpen=!isOpen">Close</button>
+        </div>
+  </div>
+</div>
             </div>
         </div>
     </div>
@@ -265,6 +303,9 @@
 <script>
 export default {
     name: "Eric",
+    data(){
+        return{isOpen:''};
+    }
 };
 </script>
 

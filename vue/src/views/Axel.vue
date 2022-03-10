@@ -42,7 +42,7 @@
                     <span
                         class="mb-8 text-xs font-bold tracking-widest text-blue-600 uppercase"
                     >
-                        Your tagline
+                        Mon Portfolio
                     </span>
                     <h1
                         class="text-neutral-600 md:text-7xl lg:text-5xl mb-8 text-4xl font-bold leading-none tracking-tighter"
@@ -52,8 +52,7 @@
                     <p
                         class="mb-8 text-base leading-relaxed text-left text-gray-500"
                     >
-                        Free and Premium themes, UI Kit's, templates and landing
-                        pages built with Tailwind CSS, HTML &amp; Next.js.
+                        20 ans, je suis actuellement dans le centre de formation d'apprentis INSTA, dans le but de devenir un jour développeur Full-stack .
                     </p>
                     <dl class="md:grid-cols-2 grid grid-cols-1 gap-12">
                         <div>
@@ -216,61 +215,140 @@
                                     Mes compétences
                                 </h2>
 
-                                
-              <div class="relative pt-8">
-                <div class="flex justify-start space-x-12 mb-4 items-center">
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Javascript</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Javascript</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Javascript</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                </div>
-              </div>
+                                <div class="relative pt-8">
+                                    <div
+                                        class="flex justify-start space-x-12 mb-4 items-center"
+                                    >
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Javascript
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Javascript
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Javascript
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <div class="relative pt-8">
-                <div class="flex justify-start space-x-12 mb-4 items-center">
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Javascript</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Vue JS</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Vue JS</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                </div>
+                                <div class="relative pt-8">
+                                    <div
+                                        class="flex justify-start space-x-12 mb-4 items-center"
+                                    >
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Javascript
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Vue JS
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                        <div class="flex-1">
+                                            <h2
+                                                class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                            >
+                                                Vue JS
+                                            </h2>
+                                            <progress
+                                                class="progress progress-primary w-56"
+                                                value="0"
+                                                max="100"
+                                            ></progress>
+                                        </div>
+                                    </div>
 
-                
+                                    <div class="relative pt-8">
+                                        <div
+                                            class="flex justify-start space-x-12 mb-4 items-center"
+                                        >
+                                            <div class="flex-1">
+                                                <h2
+                                                    class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                                >
+                                                    Javascript
+                                                </h2>
+                                                <progress
+                                                    class="progress progress-primary w-56"
+                                                    value="0"
+                                                    max="100"
+                                                ></progress>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h2
+                                                    class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                                >
+                                                    Vue JS
+                                                </h2>
+                                                <progress
+                                                    class="progress progress-primary w-56"
+                                                    value="0"
+                                                    max="100"
+                                                ></progress>
+                                            </div>
+                                            <div class="flex-1">
+                                                <h2
+                                                    class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white"
+                                                >
+                                                    Vue JS
+                                                </h2>
+                                                <progress
+                                                    class="progress progress-primary w-56"
+                                                    value="0"
+                                                    max="100"
+                                                ></progress>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                <div class="relative pt-8">
-                <div class="flex justify-start space-x-12 mb-4 items-center">
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Javascript</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Vue JS</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                  <div class="flex-1">
-                    <h2 class="text-gray-800 text-sm sm:text-base md:text-xl mb-2 dark:text-white">Vue JS</h2>
-                    <progress class="progress progress-primary w-56" value="0" max="100"></progress>
-                  </div>
-                </div>
-                </div>
-                </div>
-                
-                <a href="#" class="md:mb-2 lg:mb-0 hover:text-neutral-600 inline-flex items-center mt-6 font-semibold text-blue-500" title="read more">
+                                <a
+                                    href="#"
+                                    class="md:mb-2 lg:mb-0 hover:text-neutral-600 inline-flex items-center mt-6 font-semibold text-blue-500"
+                                    title="read more"
+                                >
                                     Learn More
                                     <svg
                                         class="w-4 h-4 ml-2"
@@ -305,11 +383,7 @@
                                 class="bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000 absolute rounded-full"
                             ></div>
                             <div class="relative">
-                                <img
-                                    class="object-cover object-center mx-auto rounded-lg shadow-2xl"
-                                    alt="hero"
-                                    src="./images/placeholders/square.svg"
-                                />
+                                
                             </div>
                         </div>
                     </div>
@@ -326,9 +400,7 @@
                 <h2
                     class="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group"
                 >
-                    <span class="inline-block mb-1 sm:mb-4">
-                        Mes Projets
-                    </span>
+                    <span class="inline-block mb-1 sm:mb-4"> Mes Projets </span>
                     <div
                         class="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100"
                     ></div>
@@ -346,6 +418,9 @@
                 class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2"
             >
                 <a href="/" aria-label="View Item">
+                <p class="mb-4 text-lg font-bold text-black-100">
+                                C# RPGCUI
+                            </p>
                     <div
                         class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
                     >
@@ -357,8 +432,8 @@
                         <div
                             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
                         >
-                            <p class="mb-4 text-lg font-bold text-gray-100">
-                                Mona Lisa
+                        <p class="mb-4 text-lg font-bold text-gray-100">
+                                
                             </p>
                             <p class="text-sm tracking-wide text-gray-300">
                                 Painted between 1503 and 1517, Da Vinci’s
@@ -367,9 +442,14 @@
                                 subject and why is she smiling?
                             </p>
                         </div>
+                        
                     </div>
+                    
                 </a>
                 <a href="/" aria-label="View Item">
+                <p class="mb-4 text-lg font-bold text-black-100">
+                                CRUD Symfony
+                            </p>
                     <div
                         class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
                     >
@@ -382,7 +462,7 @@
                             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
                         >
                             <p class="mb-4 text-lg font-bold text-gray-100">
-                                The Starry Night
+                                
                             </p>
                             <p class="text-sm tracking-wide text-gray-300">
                                 Vincent Van Gogh’s most popular painting, The
@@ -394,6 +474,9 @@
                     </div>
                 </a>
                 <a href="/" aria-label="View Item">
+                <p class="mb-4 text-lg font-bold text-black-100">
+                                Cybergame Project
+                            </p>
                     <div
                         class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
                     >
@@ -406,7 +489,7 @@
                             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
                         >
                             <p class="mb-4 text-lg font-bold text-gray-100">
-                                The Kiss
+                                
                             </p>
                             <p class="text-sm tracking-wide text-gray-300">
                                 Opulently gilded and extravagantly patterned,
@@ -418,6 +501,9 @@
                     </div>
                 </a>
                 <a href="/" aria-label="View Item">
+                <p class="mb-4 text-lg font-bold text-black-100">
+                                C# RPGCUI
+                            </p>
                     <div
                         class="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl"
                     >
@@ -430,7 +516,7 @@
                             class="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
                         >
                             <p class="mb-4 text-lg font-bold text-gray-100">
-                                The Harvesters
+                                
                             </p>
                             <p class="text-sm tracking-wide text-gray-300">
                                 Bruegel’s fanfare for the common man is
@@ -532,6 +618,9 @@
 <script>
 export default {
     name: "Axel",
+    data(){
+        return{isOpen:""};
+    }
 };
 </script>
 
