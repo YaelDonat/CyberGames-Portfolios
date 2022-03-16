@@ -311,7 +311,7 @@
                         class="inline-block px-6 py-2.5 bg-green-600 dark:bg-emerald-200 text-white dark:text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 dark:hover:bg-emerald-300 hover:shadow-lg focus:bg-green-700 dark:focus:bg-emerald-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 dark:active:bg-emerald-500 active:shadow-lg transition duration-150 ease-in-out"
                         @Click="isOpen = true"
                     >
-                        Voir tout les projets
+                        Voir tous les projets
                     </button>
                 <!-- Button trigger modal end -->
                 <!-- Modal component -->

@@ -46,14 +46,14 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="https://i.ibb.co/rmd45J1/Hehe.png"
+                                src="../assets/images/portfolioE/Minimalist_Eric.png"
                                 alt="image"
                                 class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center  lg:min-h-[350px] lg:max-h-[450px] md:min-h-[500px] md:max-h-[650px] sm:min-h-[650px] sm:max-h-[650px] h-full h-full">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://wallpaperaccess.com/full/4346244.jpg')] dark:bg-[url('https://wallpaperaccess.com/full/4346194.jpg')] bg-cover lg:min-h-[350px] lg:max-h-[450px] md:min-h-[500px] md:max-h-[650px] sm:min-h-[650px] sm:max-h-[650px] h-full">
                                 <h3>
                                     <a
-                                        class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                                        class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block"
                                     >
                                         Portfolio d'Eric
                                     </a>
@@ -62,10 +62,11 @@
                                     class="text-base text-body-color leading-relaxed mb-7"
                                 >
                                     Développeur full-stack junior<br>
+
                                 </p>
                                 <router-link to="/portfolios/eric">
                                     <a
-                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-primary hover:bg-primary hover:text-blue-500 transition"
+                                        class="inline-block py-2 px-7 border border-white rounded-full text-base text-white font-medium hover:border-white hover:bg-black hover:bg-opacity-50 transition hover:text-white-500 transition"
                                     >
                                         Voir en détail
                                     </a>
@@ -76,7 +77,7 @@
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4 ">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="../assets/images/minimalme.jpg"
+                                src="../assets/images/portfolioY/minimalme.jpg"
                                 alt="yael/jpg"
                                 class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
