@@ -7,16 +7,16 @@
       <!-- Items -->
       <div class="flex flex-col gap-1" v-for="item in getAllProjects" :key="item.id">
         <!-- Image -->
-        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-black bg-opacity-20 hover:bg-opacity-50 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] p-5">
-          <img :src="item.mainPicture" class="hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
+        <button @click="isOpen[0] = item.show; isOpen[1]=false"  class="bg-black bg-opacity-20 hover:bg-opacity-50 rounded-[50px] min-h-[75%] max-h-[75%] min-w-[80%] max-w-[80%] mx-auto p-5">
+          <img :src="item.mainPicture" class=" mx-auto hover:translate-x-1 hover:-translate-y-1 delay-50 duration-100" />
         </button>
         <!-- Title -->
-        <a href="#" class="hover:text-purple-500 text-gray-200 font-semibold"> {{item.title}} </a>
+        <a href="#" class="hover:text-purple-500 text-gray-200 font-semibold mx-auto pt-2"> {{item.title}} </a>
         <!-- Done ? -->
-        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-if="item.done"> Terminé : Oui </a>
-        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1" v-else> Terminé : Non </a>
+        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1 mx-auto" v-if="item.done"> Terminé : Oui </a>
+        <a href="#" class="hover:text-purple-500 text-sm dark:text-gray-400 text-white -mt-1 mx-auto" v-else> Terminé : Non </a>
         <!-- Poste + link -->
-        <div class="flex flex-row flex-wrap gap-2">
+        <div class="flex flex-row flex-wrap gap-2 mx-auto">
           <a href="#" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> {{item.poste}} </a>
           <a :href="item.link" class="hover:bg-gray-600 text-gray-300 text-xs font-semibold bg-gray-700 px-2 py-1 rounded-full"> Lien </a>
         </div> 
@@ -173,7 +173,7 @@
                   <h2 class="text-gray-800 dark:text-white">Stage - Développeur Backend (Symfony)</h2>
                   <h2 class="text-gray-600 dark:text-gray-400">BedBoat, galerie du port, Rue Lacan, 06600 Antibes
                   <br> 19 Janv - 21 Mars (2 mois)</h2>
-                  <h2 class="text-gray-800 dark:text-white">Ajouts de nouvelles fonctionnalitées, maintenance, SEO, minimasation du code, gestion de la base de données</h2>
+                  <h2 class="text-gray-800 dark:text-white">Ajouts de nouvelles fonctionnalités, maintenance, SEO, minimisation du code, gestion de la base de données</h2>
                 </div>
               </div>
               <!-- -->

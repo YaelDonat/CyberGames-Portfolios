@@ -1,13 +1,12 @@
 <template>
-        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 dark:bg-gray-800">
-            <div class="max-w-md w-full space-y-8">
+
             <div>
                 <img class="mx-auto h-12 w-auto dark:bg-white dark:rounded-full" src="../assets/images/cybericon.svg" alt="Workflow" />
                 <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-white">Connectez-vous à votre compte</h2>
                 <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-200">
                 Ou
                 {{ ' ' }}
-                <a href="/register" class="font-medium text-amber-600 hover:text-amber-500 dark:text-violet-400 dark:hover:text-violet-500"> vous n'avez pas de compte ? </a>
+                <router-link :to="{name : 'Register'}" class="font-medium text-amber-600 hover:text-amber-500 dark:text-violet-400 dark:hover:text-violet-500"> vous n'avez pas de compte ? </router-link>
                 </p>
             </div>
             <form class="mt-8 space-y-6" action="#" method="POST">
@@ -43,8 +42,7 @@
                 </button>
                 </div>
             </form>
-            </div>
-        </div>
+
 </template>
 
 
