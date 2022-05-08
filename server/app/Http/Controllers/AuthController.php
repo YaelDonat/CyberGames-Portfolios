@@ -19,17 +19,17 @@ class AuthController extends Controller
             'email' => 'required|email|string|unique:users,email',
             'password' => [
                 'required',
-                'confirmed',
-                Password::min(8)->mixedCase()->numbers()->symbols()
+                'same:password_confirmation',
+                Password::min(8)->mixedCase()->numbers()
             ]
         ]);
 
-        //the annotation tell user is an instance of User
         /** @var \App\Models\User $user */
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password'])
+
         ]);
 
         $token = $user->createToken('main')->plainTextToken;
@@ -64,4 +64,14 @@ class AuthController extends Controller
             'token' => $token
         ]);
     }
+
+    // public function logout()
+    // {
+    //     /** @var \App\Models\User $user */
+    //     $user = Auth::user();
+    //     $user->currentAccessToken()->delete();
+    //     return response([
+    //         'success' => true
+    //     ]);
+    // }
 }
