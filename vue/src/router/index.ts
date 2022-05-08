@@ -7,6 +7,7 @@ import Axel from "../views/Axel.vue";
 import Eric from "../views/Eric.vue";
 import Anojan from "../views/Anojan.vue";
 import Yael from "../views/Yael.vue";
+import Comments from "../views/Comments.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import PortfolioLayout from '../components/PortfolioLayout.vue';
 import AuthLayout from '../components/AuthLayout.vue';
@@ -20,10 +21,7 @@ const routes = [
         children:[
             {path: '/home', name: 'Home', component: Home },
             {path: '/portfolios', name: 'Portfolios', component: Portfolios},
-            {path: '/portfolios/axel',name: 'Axel',component: Axel},
-            {path: '/portfolios/Eric',name: 'Eric',component: Eric},
-            {path: '/portfolios/Yael',name: 'Yael',component: Yael},
-            {path: '/portfolios/Anojan',name: 'Anojan',component: Anojan},
+            {path: '/comments', name : 'Comments', component : Comments},
         ],
     },
 

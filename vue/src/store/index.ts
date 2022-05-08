@@ -4,7 +4,7 @@ const store = createStore({
     state: {
         user: {
             data: {},
-            token: 123,
+            token: sessionStorage.getItem("TOKEN"),
         },
         portfolioY:[
             {
@@ -37,8 +37,34 @@ const store = createStore({
         ]
     },
     getters: {},
-    actions: {},
-    mutations: {},
+    actions: {
+        register({ commit }, user) {
+            return fetch(`http://localhost:8000/api/register`, {
+                headers: {
+                    "Content-type": "application/json",
+                    Accept: "application/json",
+                },
+                method: "POST",
+                body: JSON.stringify(user),
+            })
+            .then((res) => res.json())
+            .then((res) => {
+                commit("setUser", res);
+                return res;
+            });
+        },
+    },
+    mutations: {
+        logout: (state) => {
+            state.user.data = {};
+            state.user.token;
+        },
+        setUser: (state, userData) => {
+            state.user.token = userData.token;
+            state.user.data = userData.data;
+            sessionStorage.setItem('TOKEN', userData.token);
+        }
+    },
     modules: {},
 });
 export default store;

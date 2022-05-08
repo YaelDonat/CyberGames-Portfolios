@@ -1,6 +1,6 @@
 <template>
-  <PageComponent title="Home">
-    Content goes here 
+  <PageComponent title="Commentaires">
+    Comments goes here 
   </PageComponent>
 </template>
 

@@ -1,24 +1,18 @@
 <template>
-    <header class="bg-gray-100 dark:bg-gray-800">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-center">
-                Portfolios de l'équipe
-            </h1>
-        </div>
-    </header>
-    <main>
+   <PageComponent title="Portfolio de l'équipe">
+       <main>
         <!-- ====== Cards Section Start -->
         <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-gray-100 dark:bg-gray-800 min-h-screen">
             <div class="grid-cols-4">
                 <div class="flex">
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                        <div class="bg-white dark:bg-white-100 rounded-lg overflow-hidden mb-10">
+                        <div class="bg-white dark:bg-black rounded-lg overflow-hidden mb-10">
                             <img
                                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
                                 alt="image"
                                 class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
-                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center  lg:min-h-[350px] lg:max-h-[450px] md:min-h-[500px] md:max-h-[650px] sm:min-h-[650px] sm:max-h-[650px] h-fullh-full">
+                            <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center lg:min-h-[350px] lg:max-h-[450px] md:min-h-[500px] md:max-h-[650px] sm:min-h-[650px] sm:max-h-[650px] h-full">
                                 <h3>
                                     <a
                                         class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
@@ -109,7 +103,7 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">
-                        <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <div class="bg-white dark:bg-black rounded-lg overflow-hidden mb-10">
                             <img
                                 src="https://i.ibb.co/BKt77Q0/Minimalist-Wallpaper.png"
                                 alt="image"
@@ -145,16 +139,13 @@
         </section>
         <!-- ====== Cards Section End -->
     </main>
+   </PageComponent>
 </template>
 
-<script>
+<script setup>
 import Button from "../components/reusable/Button.vue";
-export default {
-    name: "Portfolios",
-    components: {
-        Button,
-    },
-};
+import PageComponent from "../components/PageComponent.vue";
+
 </script>
 
 <style scoped></style>
