@@ -2,7 +2,7 @@
    <PageComponent title="Portfolio de l'équipe">
        <main>
         <!-- ====== Cards Section Start -->
-        <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-gray-100 dark:bg-gray-800 min-h-screen">
+        <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-slate-300 dark:bg-zinc-800 min-h-screen">
             <div class="grid-cols-4">
                 <div class="flex">
                     <div class="w-full md:w-1/2 xl:w-1/3 px-4">

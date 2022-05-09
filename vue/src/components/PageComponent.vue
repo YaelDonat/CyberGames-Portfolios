@@ -1,12 +1,12 @@
 <template>
 
-    <header class="bg-white dark:bg-gray-800">
+    <header class="bg-slate-100 dark:bg-zinc-700">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl font-bold text-gray-900 dark:text-white "> {{ title }}</h1>
       </div>
     </header>
     <main>
-      <div class="max-w-full mx-auto py-6 sm:px-6 lg:px-8 bg-white dark:bg-gray-800 min-h-screen">
+      <div class="max-w-full mx-auto py-6 sm:px-6 lg:px-8 bg-slate-100 dark:bg-zinc-700 min-h-screen">
         <!-- Replace with your content -->
         <div class="px-4 py-6 sm:px-0 text-white">
           <slot></slot>

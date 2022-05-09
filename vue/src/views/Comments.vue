@@ -1,6 +1,8 @@
 <template>
   <PageComponent title="Commentaires">
+    <div class="text-gray-900 dark:text-white">
     Comments goes here 
+    </div>
   </PageComponent>
 </template>
 
