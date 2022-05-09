@@ -26,10 +26,10 @@
               <!-- Profile dropdown -->
               <Menu as="div" class="ml-3 relative">
                 <div>
-                  <MenuButton class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                  <MenuButton class="max-w-xs bg-violet-800 p-2 rounded flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                     <span class="sr-only">Menu utilisateur</span>
                    <!-- <img class="h-8 w-8 rounded-full" :src="user.imageUrl" alt="" /> -->
-                   Button 
+                   <fa :icon="['fa','bars']" class="text-xl text-white" />
                   </MenuButton>
                 </div>
                 <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
@@ -49,7 +49,7 @@
           </div>
           <div class="-mr-2 flex md:hidden">
             <!-- Mobile menu button -->
-            <DisclosureButton class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+            <DisclosureButton class="bg-violet-800 inline-flex items-center justify-center p-2 ml-5 rounded-md text-gray-400 hover:text-white hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
               <span class="sr-only">Menu principal</span>
               <MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
               <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
@@ -60,13 +60,12 @@
 
       <DisclosurePanel class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-          <router-link v-for="item in navigation" :key="item.name"  :to="item.to" active-class="bg-gray-900 text-white" :class="[this.$route.name === item.to.name ? '' : 'text-gray-300 hover:bg-gray-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']">{{ item.name }}</router-link>
+          <router-link v-for="item in navigation" :key="item.name"  :to="item.to" active-class="bg-violet-900 text-white" :class="[this.$route.name === item.to.name ? '' : 'text-gray-300 hover:bg-violet-700 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']">{{ item.name }}</router-link>
         </div>
-        <div class="pt-4 pb-3 border-t border-gray-700">
+        <div class="pt-4 pb-3 border-t border-violet-700">
           <div class="flex items-center px-5">
             <div class="flex-shrink-0">
-              <!--<img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" /> -->
-              Button 
+              <!--<img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" /> --> 
             </div>
             <div class="ml-3">
               <div class="text-base font-medium leading-none text-white">{{ user.name }}</div>
@@ -75,7 +74,7 @@
            
           </div>
           <div class="mt-3 px-2 space-y-1">
-            <DisclosureButton as="a" @click="logout" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700 cursor-pointer">Se déconnecter</DisclosureButton>
+            <DisclosureButton as="a" @click="logout" class="block px-3 py-2 rounded-md text-base font-medium text-gray-200 hover:text-white hover:bg-violet-700 cursor-pointer">Se déconnecter</DisclosureButton>
           </div>
         </div>
       </DisclosurePanel>
@@ -127,10 +126,13 @@ export default {
     const router = useRouter();
 
     function logout(){
-      store.commit('logout');
-      router.push({
+      store.dispatch('logout')
+      .then(()=>{
+        router.push({
         name : 'Login'
-      })
+      });
+      });
+      
     }
 
     return {

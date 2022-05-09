@@ -9,22 +9,28 @@
                 <router-link :to="{name : 'Register'}" class="font-medium text-amber-600 hover:text-amber-500 dark:text-violet-400 dark:hover:text-violet-500"> vous n'avez pas de compte ? </router-link>
                 </p>
             </div>
-            <form class="mt-8 space-y-6" action="#" method="POST">
+            <form class="mt-8 space-y-6" @submit="login">
+            <div v-if="errorMsg" class="flex item-center justify-between py-3 px-5 bg-red-500 text-white rounded">
+                {{errorMsg}}
+                <span @click="errorMsg = '' "  class="w-8 h-8 flex items-center justify-center text-2xl rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]">
+                    <fa :icon="['fa','xmark']"/>
+                </span>
+            </div>
                 <input type="hidden" name="remember" value="true" />
                 <div class="rounded-md shadow-sm -space-y-px">
                 <div>
                     <label for="email-address" class="sr-only">E-mail</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:z-10 sm:text-sm" placeholder="Adresse mail" />
+                    <input id="email-address" name="email" type="email" autocomplete="email" required="" v-model="user.email" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:z-10 sm:text-sm" placeholder="Adresse mail" />
                 </div>
                 <div>
                     <label for="password" class="sr-only">Mot de passe</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required="" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:border-amber-500 focus:z-10 sm:text-sm" placeholder="Mot de passe" />
+                    <input id="password" name="password" type="password" autocomplete="current-password" required="" v-model="user.password"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:border-amber-500 focus:z-10 sm:text-sm" placeholder="Mot de passe" />
                 </div>
                 </div>
 
                 <div class="flex items-center justify-between">
                 <div class="flex items-center">
-                    <input id="remember-me" name="remember-me" type="checkbox" class="h-4 w-4 text-amber-600 dark:text-violet-600 focus:ring-amber-500 dark:focus:ring-violet-500 border-gray-300 rounded" />
+                    <input id="remember-me" name="remember-me" type="checkbox" v-model="user.remember"  class="h-4 w-4 text-amber-600 dark:text-violet-600 focus:ring-amber-500 dark:focus:ring-violet-500 border-gray-300 rounded" />
                     <label for="remember-me" class="ml-2 block text-sm text-gray-900 dark:text-white"> Se rappeler de moi </label>
                 </div>
 
@@ -46,14 +52,34 @@
 </template>
 
 
-<script>
-export default{
-    name:"Login",
-    components: {
-    LockClosedIcon,
-    },
-}
+<script setup>
+
 import { LockClosedIcon } from '@heroicons/vue/solid'
+import store from '../store'
+import {useRouter} from 'vue-router'
+import {ref} from 'vue'
+
+const user = {
+    email : '',
+    password: '',
+    remember: false
+}
+const router = useRouter();
+let errorMsg = ref('');
+
+function login(event){
+    event.preventDefault();
+
+    store.dispatch('login', user)
+        .then(()=>{
+            router.push({
+                name:'Home'
+            })
+        }).catch(err => {
+            errorMsg.value = err.response.data.error
+        })
+}
+
 </script>
 
 <style scoped>

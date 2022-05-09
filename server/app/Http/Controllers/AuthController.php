@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Testing\Fluent\Concerns\Has;
 
 class AuthController extends Controller
 {
@@ -65,13 +65,14 @@ class AuthController extends Controller
         ]);
     }
 
-    // public function logout()
-    // {
-    //     /** @var \App\Models\User $user */
-    //     $user = Auth::user();
-    //     $user->currentAccessToken()->delete();
-    //     return response([
-    //         'success' => true
-    //     ]);
-    // }
+    public function logout()
+    {
+        /** @var User $user */
+        $user = Auth::user();
+        // Revoke the token that was used to authenticate the current request
+        $user->currentAccessToken()->delete();
+        return response([
+            'success' => true
+        ]);
+    }
 }
