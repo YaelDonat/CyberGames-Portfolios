@@ -2,10 +2,11 @@
    <PageComponent title="Portfolio de l'équipe">
        <main>
         <!-- ====== Cards Section Start -->
-        <section class="pt-20 lg:pt-[60px] pb-10 lg:pb-20 bg-slate-300 dark:bg-zinc-800 min-h-screen">
-            <div class="grid-cols-4">
-                <div class="flex">
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+        <section class="pt-20 lg:pt-[60px] rounded-lg pb-10 lg:pb-20 bg-slate-300 dark:bg-zinc-800 min-h-screen">
+            <div class="grid gap-3 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 ">
+            
+                    <!-- ====== Cards Section Axel -->
+                    <div class="w-full md:w-full xl:w-full px-4">
                         <div class="bg-white dark:bg-black rounded-lg overflow-hidden mb-10">
                             <img
                                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
@@ -37,7 +38,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+
+                    <!-- ====== Cards Section Eric -->
+                    <div class="w-full md:w-full xl:w-full px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
                                 src="../assets/images/portfolioE/Minimalist_Eric.png"
@@ -68,7 +71,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4 ">
+
+                    <!-- ====== Cards Section Yael -->
+                    <div class="w-full md:w-full xl:w-full px-4 ">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
                                 src="../assets/images/portfolioY/minimalme.jpg"
@@ -102,7 +107,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+
+                    <!-- ====== Cards Section Anojan -->
+                    <div class="w-full md:w-full xl:w-full px-4">
                         <div class="bg-white dark:bg-black rounded-lg overflow-hidden mb-10">
                             <img
                                 src="https://i.ibb.co/BKt77Q0/Minimalist-Wallpaper.png"
@@ -134,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
         </section>
         <!-- ====== Cards Section End -->

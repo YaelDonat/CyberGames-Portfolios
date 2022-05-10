@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\User::class, 'user_id');
             $table->string('content', length: 1000);
+            $table->string('title', length: 50);
             $table->timestamps();
         });
     }

@@ -2,12 +2,42 @@ import axios from 'axios';
 import { createStore } from "vuex";
 import axiosClient from '../axios';
 
+const tmpComments = [
+    {
+        id: 1,
+        user_id: 6,
+        content: "Test de commentaire pour notre magnifique jeu vidéo",
+        title : "Titre de test" ,
+        created_at: "2022-05-10 13:00",
+        updated_at: "2022-05-10 13:00",
+    },
+
+    {
+        id: 2,
+        user_id: 6,
+        title : "Titre de test 2",
+        content: "Test de commentaire pour notre magnifique jeu vidéo 2ème du nom",
+        created_at: "2022-05-10 13:00",
+        updated_at: "2022-05-10 13:00",
+    },
+
+     {
+        id: 3,
+        user_id: 6,
+        title : "Titre de test 3",
+        content: "Test de commentaire pour notre magnifique jeu vidéo 3ème du nom",
+        created_at: "2022-05-10 13:00",
+        updated_at: "2022-05-10 13:00",
+    },
+];
+
 const store = createStore({
     state: {
         user: {
             data: {},
             token: sessionStorage.getItem("TOKEN"),
         },
+        comments: [...tmpComments],
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',

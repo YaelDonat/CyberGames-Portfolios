@@ -1,8 +1,13 @@
 <template>
 
-    <header class="bg-slate-100 dark:bg-zinc-700">
+    <header class="bg-slate-100 dark:bg-zinc-700 shadow">
       <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-gray-900 dark:text-white "> {{ title }}</h1>
+
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white ">
+          {{ title }}
+        </h1>
+        <slot name="header"></slot>
+
       </div>
     </header>
     <main>

@@ -7,6 +7,7 @@ import Axel from "../views/Axel.vue";
 import Eric from "../views/Eric.vue";
 import Anojan from "../views/Anojan.vue";
 import Yael from "../views/Yael.vue";
+import CommentsShow from "../views/CommentsShow.vue";
 import Comments from "../views/Comments.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import PortfolioLayout from '../components/PortfolioLayout.vue';
@@ -22,6 +23,8 @@ const routes = [
             {path: '/home', name: 'Home', component: Home },
             {path: '/portfolios', name: 'Portfolios', component: Portfolios},
             {path: '/comments', name : 'Comments', component : Comments},
+            {path: '/comments/create', name:'CommentsCreate', component : CommentsShow},
+            {path: '/comments/:id', name:'CommentsShow', component : CommentsShow},
         ],
     },
 
