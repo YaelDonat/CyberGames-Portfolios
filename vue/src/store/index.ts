@@ -6,6 +6,7 @@ const tmpComments = [
     {
         id: 1,
         user_id: 6,
+        ratings_id: 1,
         content: "Test de commentaire pour notre magnifique jeu vidéo",
         title : "Titre de test" ,
         created_at: "2022-05-10 13:00",
@@ -15,6 +16,7 @@ const tmpComments = [
     {
         id: 2,
         user_id: 6,
+        ratings_id: 2,
         title : "Titre de test 2",
         content: "Test de commentaire pour notre magnifique jeu vidéo 2ème du nom",
         created_at: "2022-05-10 13:00",
@@ -24,6 +26,7 @@ const tmpComments = [
      {
         id: 3,
         user_id: 6,
+        ratings_id: 3,
         title : "Titre de test 3",
         content: "Test de commentaire pour notre magnifique jeu vidéo 3ème du nom",
         created_at: "2022-05-10 13:00",
