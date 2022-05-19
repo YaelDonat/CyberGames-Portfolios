@@ -53,7 +53,7 @@ class AuthController extends Controller
         unset($credentials['remember']);
         if (!Auth::attempt($credentials, $remember)) {
             return response([
-                'error' => 'The provided credentials are not correct'
+                'error' => 'Les identifiants fournis sont erronés'
             ], 422);
         }
         /** @var \App\Models\User $user **/
