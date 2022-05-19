@@ -18,6 +18,7 @@ class Comments extends Model
         'user_id',
         'content',
         'title',
+        'slug',
     ];
 
     public function users()
