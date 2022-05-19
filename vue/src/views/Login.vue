@@ -89,7 +89,7 @@
                             </div>
                             <div class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center">
                                 <router-link :to="{ name: 'Register' }"
-                                    class="font-medium text-blue-600 hover:text-blue-500 dark:text-violet-400 dark:hover:text-violet-500">
+                                    class="font-medium text-teal-600 hover:text-teal-500 dark:text-violet-400 dark:hover:text-violet-500">
                                     Vous n'avez pas de compte ? </router-link>
                             </div>
                         </form>
