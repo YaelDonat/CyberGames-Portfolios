@@ -1,53 +1,103 @@
 <template>
 
-            <div>
-                <img class="mx-auto h-12 w-auto dark:bg-white dark:rounded-full" src="../assets/images/cybericon.svg" alt="Workflow" />
-                <h2 class="mt-6 text-center text-3xl font-extrabold text-black dark:text-white">Connectez-vous à votre compte</h2>
-                <p class="mt-2 text-center text-sm text-gray-600 dark:text-gray-200">
-                Ou
-                {{ ' ' }}
-                <router-link :to="{name : 'Register'}" class="font-medium text-amber-600 hover:text-amber-500 dark:text-violet-400 dark:hover:text-violet-500"> vous n'avez pas de compte ? </router-link>
-                </p>
+    <div class="flex items-center max-h-screen bg-gray-50">
+        <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
+            <div class="flex flex-col md:flex-row">
+                <div class="h-32 md:h-auto md:w-1/2">
+                    <img class="object-cover w-full h-full" src="https://source.unsplash.com/user/erondu/1600x900"
+                        alt="img" />
+                </div>
+                <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
+                    <div class="w-full">
+                        <div class="flex justify-center">
+                            <img class="mx-auto h-12 w-auto dark:bg-white dark:rounded-full"
+                                src="../assets/images/cybericon.svg" alt="Workflow" />
+                        </div>
+                        <br>
+                        <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">
+                            Connexion à votre compte
+                        </h1>
+                        <form class="mt-8 space-y-6" @submit="login">
+                            <div v-if="errorMsg"
+                                class="flex item-center justify-between py-3 px-5 bg-red-500 text-white rounded">
+                                {{ errorMsg }}
+                                <span @click="errorMsg = ''"
+                                    class="w-8 h-8 flex items-center justify-center text-2xl rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]">
+                                    <fa :icon="['fa', 'xmark']" />
+                                </span>
+                            </div>
+                            <input type="hidden" name="remember" value="true" />
+                            <div>
+                                <label for="email-address" class="block text-sm">
+                                    E-mail
+                                </label>
+                                <input id="email-address" name="email" type="email" autocomplete="email" required=""
+                                    v-model="user.email"
+                                    class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                                    placeholder="Votre adresse email" />
+                            </div>
+                            <div>
+                                <label for="password" class="block mt-4 text-sm">
+                                    Mot de passe
+                                </label>
+                                <input id="password" name="password" type="password" autocomplete="current-password"
+                                    required="" v-model="user.password"
+                                    class="w-full px-4 py-2 text-sm border rounded-md focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-600"
+                                    placeholder="Votre mot de passe" />
+                            </div>
+                            <p class="mt-4">
+                                <a class="text-sm text-blue-600 hover:underline" href="./forgot-password.html">
+                                    Mot de passe oublié ?
+                                </a>
+                            </p>
+
+                            <button
+                                class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-lg active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+                                href="#">
+                                Se connecter
+                            </button>
+
+                            <hr class="my-8 " />
+
+                            <div class="flex items-center justify-center gap-4">
+                                <button
+                                    class="flex items-center justify-center w-full px-4 py-2 text-sm text-white text-gray-700 border border-gray-300 rounded-lg hover:border-gray-500 focus:border-gray-500">
+                                    <svg class="w-4 h-4 mr-2" aria-hidden="true" viewBox="0 0 24 24"
+                                        fill="currentColor">
+                                        <path
+                                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                                    </svg>
+                                    Github
+                                </button>
+                                <button
+                                    class="flex items-center justify-center w-full px-4 py-2 text-sm text-white text-gray-700 border border-gray-300 rounded-lg hover:border-gray-500 focus:border-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        class="w-4 h-4 mr-2" viewBox="0 0 48 48">
+                                        <defs>
+                                            <path id="a"
+                                                d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+                                        </defs>
+                                        <clipPath id="b">
+                                            <use xlink:href="#a" overflow="visible" />
+                                        </clipPath>
+                                        <path clip-path="url(#b)" fill="#FBBC05" d="M0 37V11l17 13z" />
+                                        <path clip-path="url(#b)" fill="#EA4335" d="M0 11l17 13 7-6.1L48 14V0H0z" />
+                                        <path clip-path="url(#b)" fill="#34A853" d="M0 37l30-23 7.9 1L48 0v48H0z" />
+                                        <path clip-path="url(#b)" fill="#4285F4" d="M48 48L17 24l-4-3 35-10z" />
+                                    </svg>Google
+                                </button>
+                            </div>
+                            <div class="block w-full px-4 py-2 mt-4 text-sm font-medium leading-5 text-center">
+                                <router-link :to="{ name: 'Register' }"
+                                    class="font-medium text-blue-600 hover:text-blue-500 dark:text-violet-400 dark:hover:text-violet-500">
+                                    Vous n'avez pas de compte ? </router-link>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <form class="mt-8 space-y-6" @submit="login">
-            <div v-if="errorMsg" class="flex item-center justify-between py-3 px-5 bg-red-500 text-white rounded">
-                {{errorMsg}}
-                <span @click="errorMsg = '' "  class="w-8 h-8 flex items-center justify-center text-2xl rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]">
-                    <fa :icon="['fa','xmark']"/>
-                </span>
-            </div>
-                <input type="hidden" name="remember" value="true" />
-                <div class="rounded-md shadow-sm -space-y-px">
-                <div>
-                    <label for="email-address" class="sr-only">E-mail</label>
-                    <input id="email-address" name="email" type="email" autocomplete="email" required="" v-model="user.email" class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-amber-500 focus:border-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:z-10 sm:text-sm" placeholder="Adresse mail" />
-                </div>
-                <div>
-                    <label for="password" class="sr-only">Mot de passe</label>
-                    <input id="password" name="password" type="password" autocomplete="current-password" required="" v-model="user.password"  class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-amber-500 dark:focus:ring-violet-500 dark:focus:border-violet-500 focus:border-amber-500 focus:z-10 sm:text-sm" placeholder="Mot de passe" />
-                </div>
-                </div>
-
-                <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <input id="remember-me" name="remember-me" type="checkbox" v-model="user.remember"  class="h-4 w-4 text-amber-600 dark:text-violet-600 focus:ring-amber-500 dark:focus:ring-violet-500 border-gray-300 rounded" />
-                    <label for="remember-me" class="ml-2 block text-sm text-gray-900 dark:text-white"> Se rappeler de moi </label>
-                </div>
-
-                <div class="text-sm">
-                    <a href="#" class="font-medium text-amber-600 hover:text-amber-500 dark:text-violet-400"> Mot de passe oublié? </a>
-                </div>
-                </div>
-
-                <div>
-                <button type="submit" class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-amber-600 hover:bg-amber-700 dark:bg-violet-600 dark:hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 dark:focus:ring-violet-500">
-                    <span class="absolute left-0 inset-y-0 flex items-center pl-3">
-                    <LockClosedIcon class="h-5 w-5 text-amber-500 dark:text-violet-500 group-hover:text-amber-400 dark:group-hover:text-violet-400" aria-hidden="true" />
-                    </span>
-                    Se connecter
-                </button>
-                </div>
-            </form>
+        </div>
+    </div>
 
 </template>
 
@@ -56,24 +106,24 @@
 
 import { LockClosedIcon } from '@heroicons/vue/solid'
 import store from '../store'
-import {useRouter} from 'vue-router'
-import {ref} from 'vue'
+import { useRouter } from 'vue-router'
+import { ref } from 'vue'
 
 const user = {
-    email : '',
+    email: '',
     password: '',
     remember: false
 }
 const router = useRouter();
 let errorMsg = ref('');
 
-function login(event){
+function login(event) {
     event.preventDefault();
 
     store.dispatch('login', user)
-        .then(()=>{
+        .then(() => {
             router.push({
-                name:'Home'
+                name: 'Home'
             })
         }).catch(err => {
             errorMsg.value = err.response.data.error
@@ -83,5 +133,4 @@ function login(event){
 </script>
 
 <style scoped>
-
 </style>
