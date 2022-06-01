@@ -10,7 +10,7 @@
         <form @submit.prevent="saveComment">
             <div class="shadow sm:rounded-md sm-overflow-hidden">
                 <!-- Comments Fiels-->
-                <div class="px-4 py-5 bg-white space-y-6 sm:p-6 rounded-sm">
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6 rounded-sm text-black">
 
                     <div>
                         <!-- Title Field -->

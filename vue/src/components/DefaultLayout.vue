@@ -107,6 +107,7 @@ const navigation = [
   { name: 'Home', to: { name: 'Home' } },
   { name: 'Portfolios', to: { name: 'Portfolios' } },
   { name: 'Comments', to: { name: 'Comments' } },
+  { name: 'Contact', to: { name: 'Contact' } },
   //{ name: 'Se connecter', to: {name:'Login'}},
 ]
 

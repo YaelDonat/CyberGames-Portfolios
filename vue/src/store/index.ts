@@ -68,7 +68,11 @@ const store = createStore({
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
                 mainPicture: '../src/assets/images/PortfolioY/budokan-Logo.png', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['../src/assets/images/logo.png', '../src/assets/images/logo.png'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
             }
-
+        ],
+        gameImage:[
+            {slug:'menu_principal',title :'Menu principal' ,name : '../src/assets/images/gamePics/mainMenuGame.png'},
+            {slug:'carte',title :'Carte' ,name : '../src/assets/images/gamePics/GameMap.png'},
+            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
         ]
     },
     getters: {},
