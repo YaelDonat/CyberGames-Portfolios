@@ -73,6 +73,9 @@ const store = createStore({
             {slug:'menu_principal',title :'Menu principal' ,name : '../src/assets/images/gamePics/mainMenuGame.png'},
             {slug:'carte',title :'Carte' ,name : '../src/assets/images/gamePics/GameMap.png'},
             {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
+            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
+            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
+            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
         ]
     },
     getters: {},
