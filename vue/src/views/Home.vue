@@ -11,7 +11,7 @@
 
        <!-- Game images loop -->
       <div class="grid grid-cols-3 gap-10 mt-[5%] ">
-        <div v-for="(img, index) in gameImg">
+        <div v-for="(img, index) in gameImg" class="mx-auto">
           <label :for="img.slug" class="block text-md font-sans">{{img.title}}</label>
           <img :key="index" :src="img.name" class="rounded-lg" :alt="img.slug" :id="img.slug" />
         </div>
