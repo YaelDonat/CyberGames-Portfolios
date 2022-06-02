@@ -65,14 +65,18 @@ const route = useRoute();
 
 let model = ref({
     title : "",
+    slug :"",
     content :null,
     ratings_id:1,
 });
 
-if(route.params.id){
-    model.value = store.state.comments.find(
-        (s) => s.id === parseInt(route.params.id)
-    );
+function saveComment(){
+    store.dispatch("saveComment",model.value).then(({data})=>{
+        router.push({
+            name:"Comments",
+            params:{id: data.data.id},
+        })
+    });
 }
 
 </script>

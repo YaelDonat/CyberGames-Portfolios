@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createStore } from "vuex";
 import axiosClient from '../axios';
 
-const tmpComments = [
+/*const tmpComments = [
     {
         id: 1,
         user_id: 6,
@@ -33,14 +33,15 @@ const tmpComments = [
         updated_at: "2022-05-10 13:00",
     },
 ];
-
+*/
 const store = createStore({
     state: {
         user: {
             data: {},
             token: sessionStorage.getItem("TOKEN"),
         },
-        comments: [...tmpComments],
+        //comments: [...tmpComments],
+        comments:[],
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
@@ -78,7 +79,13 @@ const store = createStore({
             {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
         ]
     },
-    getters: {},
+
+    getters: {
+        comments:state=>{
+            return state.comments
+        }
+    },
+
     actions: {
         register({ commit }, user){
             return axiosClient.post('/register', user)
@@ -101,7 +108,25 @@ const store = createStore({
                 return response;
             })
         },
+        
+        saveComment({commit},comment){
+            let response;
+            if(comment.id){
+                response = axiosClient
+                .put(`/comments/${comment.id}`,comment)
+                .then((res)=>{
+                    commit("updateComment",res.data);
+                    return res;
+                });
+            } else{
+                response = axiosClient.post("/comments/",comment).then((res)=>{
+                    return res;
+                });
+            }
+            return response;
+        },
     },
+
     mutations: {
         logout: (state) => {
             state.user.data = {};
@@ -112,8 +137,29 @@ const store = createStore({
             state.user.token = userData.token;
             state.user.data = userData.data;
             sessionStorage.setItem('TOKEN', userData.token);
-        }
+            sessionStorage.setItem('UserPseudo', userData.data);
+        },
+        FETCH_COMMENTS(state, comments) {
+            return state.comments = comments
+        },
+        DELETE_COMMENT(state, comment) {
+            let index = state.comments.findIndex(item => item.id === comment.id)
+            state.comments.splice(index, 1)
+        },
+        saveComment:(state,comment)=>{
+            state.comments = [...state.comments, comment.data];
+        },
+        updateComment:(state,comment)=>{
+            state.comments = state.comments.map((c)=>{
+                if(c.id == comment.data.id){
+                    return comment.data;
+                }
+                return c;
+            });
+        },
     },
+
     modules: {},
+
 });
 export default store;

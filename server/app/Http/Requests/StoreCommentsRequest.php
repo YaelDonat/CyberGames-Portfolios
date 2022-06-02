@@ -32,7 +32,7 @@ class StoreCommentsRequest extends FormRequest
     {
         return [
             'title'=>'required|string|max:100',
-            'user_id'=>'exists:user,id',
+            'user_id'=>'exists:users,id',
             'content'=>'required|string|max:1000',
         ];
     }

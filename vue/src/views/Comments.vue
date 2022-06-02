@@ -46,7 +46,7 @@ import PageComponent from '../components/PageComponent.vue';
 import store from "../store"
 import {computed} from 'vue';
 
-const comments = computed(()=>store.state.comments)
+//const comments = computed(()=>store.state.comments)
 
 function deleteComment(comment){
   if(confirm(`Voulez-vous vraiment supprimer ce commentaire "${comment.title}" ? `)){
