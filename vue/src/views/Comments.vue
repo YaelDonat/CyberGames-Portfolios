@@ -79,7 +79,7 @@ store.dispatch("getComments")
 function deleteComment(comment) {
   if (
     confirm(
-      `Are you sure you want to delete this comment? Operation can't be undone!!`
+      `Êtes-vous sûr de vouloir supprimer ce commentaire ? Cette action sera irréversible !`
     )
   ) {
     store.dispatch("deleteComment", comment.id).then(() => {

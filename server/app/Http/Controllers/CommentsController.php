@@ -18,7 +18,7 @@ class CommentsController extends Controller
     public function index(Request $request)
     {
         $user = $request->user();
-        return CommentsResource::collection(Comments::where('user_id',$user->id)->orderBy('created_at', 'DESC')->paginate(6));
+        return CommentsResource::collection(Comments::paginate(6));
     }
 
     /**
