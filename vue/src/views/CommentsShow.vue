@@ -3,7 +3,7 @@
         <template v-slot:header>
             <div class="flex item-center justify-between">
                 <h1 class="text-3xl font-bold text-gray-50">
-                {{ model.id ? model.title : "Ajoutez un commentaire" }}
+                {{ route.params.id ? model.title : "Ajoutez un commentaire" }}
                 </h1>
             </div>
         </template>
@@ -31,15 +31,6 @@
                         />
                         </div>
                     </div>
-                    
-                    <!-- 
-                    <div v-if="!model.ratings_id">
-                        Vous n'avez pas laissé d'évaluation encore
-                        <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
-                        Mettre des etoiles
-                        </button>
-                    </div>
-                    -->
                 </div>
             </div>
             
@@ -58,26 +49,73 @@
 <script setup>
 import PageComponent from "../components/PageComponent.vue";
 import store from "../store";
-import { ref } from "vue";
-import { useRoute } from "vue-router";
+import { ref, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 
-const route = useRoute(); 
+const router = useRouter();
+const route = useRoute();
 
 let model = ref({
     title : "",
-    slug :"",
     content :null,
-    ratings_id:1,
 });
 
-function saveComment(){
-    store.dispatch("saveComment",model.value).then(({data})=>{
-        router.push({
-            name:"Comments",
-            params:{id: data.data.id},
-        })
+//watch the current comment data change and when this happens
+watch(
+  () => store.state.currentComment.data,
+  (newVal, oldVal) => {
+    model.value = {
+      ...JSON.parse(JSON.stringify(newVal)),
+      status: !!newVal.status,
+    };
+  }
+);
+
+if(route.params.id){
+    store.dispatch('getComment', route.params.id);
+};
+
+function saveComment() {
+  let action = "created";
+  if (model.value.id) {
+    action = "updated";
+  }
+  store.dispatch("saveComment", { ...model.value }).then(({ data }) => {
+    store.commit("notify", {
+      type: "success",
+      message: "The comment was successfully " + action,
     });
+    router.push({
+      name: "CommentsShow",
+      params: { id: data.data.id },
+    });
+  });
+};
+
+function deleteComment() {
+  if (
+    confirm(
+      `Are you sure you want to delete this comment? Operation can't be undone!!`
+    )
+  ) {
+    store.dispatch("deleteComment", model.value.id).then(() => {
+      router.push({
+        name: "Comments",
+      });
+    });
+  }
 }
+
+//function saveComment(){
+//    store.dispatch("saveComment",model.value).then(({data})=>{
+//        router.push({
+//            name:"CommentsShow",
+//            params:{id:data.data.id},
+//        })
+//    });
+//}
+
+
 
 </script>
 

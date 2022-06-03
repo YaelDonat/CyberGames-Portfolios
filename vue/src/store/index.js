@@ -40,8 +40,20 @@ const store = createStore({
             data: {},
             token: sessionStorage.getItem("TOKEN"),
         },
+        currentComment: {
+            loading: false,
+            data:{}
+        },
+        notification: {
+            show: false,
+            type: 'success',
+            message: ''
+        },
         //comments: [...tmpComments],
-        comments:[],
+        comments:{
+            data:[],
+            links:[],
+        },
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
@@ -120,10 +132,35 @@ const store = createStore({
                 });
             } else{
                 response = axiosClient.post("/comments/",comment).then((res)=>{
+                    commit('setCurrentComment', res.data)
                     return res;
                 });
             }
             return response;
+        },
+        deleteComment({ dispatch }, id) {
+            return axiosClient.delete(`/comments/${id}`).then((res) => {
+            dispatch('getComments')
+            return res;
+            });
+        },
+        getComment({commit},id){
+            return axiosClient
+            .get(`/comments/${id}`)
+            .then((res)=>{
+                commit("setCurrentComment", res.data);
+                return res;
+            })
+            .catch((err)=>{
+                throw err;
+            })
+        },
+        getComments({ commit }, {url = null} = {}) {
+            url = url || "/comments";
+            return axiosClient.get(url).then((res) => { 
+            commit("setComments", res.data);
+            return res;
+            });
         },
     },
 
@@ -139,13 +176,6 @@ const store = createStore({
             sessionStorage.setItem('TOKEN', userData.token);
             sessionStorage.setItem('UserPseudo', userData.data);
         },
-        FETCH_COMMENTS(state, comments) {
-            return state.comments = comments
-        },
-        DELETE_COMMENT(state, comment) {
-            let index = state.comments.findIndex(item => item.id === comment.id)
-            state.comments.splice(index, 1)
-        },
         saveComment:(state,comment)=>{
             state.comments = [...state.comments, comment.data];
         },
@@ -156,6 +186,22 @@ const store = createStore({
                 }
                 return c;
             });
+        },
+        setCurrentComment:(state,comment)=>{
+            state.currentComment.data = comment.data;
+        },
+        setComments: (state, comments) => {
+            state.comments.links = comments.meta.links;
+            state.comments.data = comments.data;
+        },
+        
+        notify: (state, {message, type}) => {
+            state.notification.show = true;
+            state.notification.type = type;
+            state.notification.message = message;
+            setTimeout(() => {
+            state.notification.show = false;
+            }, 3000)
         },
     },
 

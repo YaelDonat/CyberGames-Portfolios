@@ -14,9 +14,9 @@
       </div>
 
     </template>
-      <div class="grid grid-cols-1 gap-1 sm:grid-cols-1 md:grid-cols-1 text-black place-items-center">
+      <div class="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3 text-black place-items-center">
         <!-- Comments -->
-        <div v-for="comment in comments" :key="comments.id" class="flex flex-col py-4 px-6 mb-5 shadow-sm bg-white hover:bg-gray-100 rounded-lg h-[400px] w-1/2">
+        <div v-for="comment in comments.data" :key="comments.id" class="flex flex-col py-4 px-6 mb-5 shadow-sm bg-white hover:bg-gray-100 rounded-lg h-[400px] w-3/4">
           
           <h4 class="mt-4 text-xl font-bold "> {{comment.title}}</h4>
           <div v-html="comment.content" class="overflow-hidden flex-1"></div>
@@ -37,6 +37,35 @@
 
         </div>
       </div>
+
+  <!-- PAGINATION -->
+    <div class="flex justify-center mt-5">
+        <nav
+          class="relative z-0 inline-flex justify-center rounded-md shadow-sm -space-x-px"
+          aria-label="Pagination"
+        >
+          <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
+          <a
+            v-for="(link, i) of comments.links"
+            :key="i"
+            :disabled="!link.url"
+            href="#"
+            @click="getForPage($event, link)"
+            aria-current="page"
+            class="relative inline-flex items-center px-4 py-2 border text-sm font-medium whitespace-nowrap"
+            :class="[
+              link.active
+                ? 'z-10 bg-violet-50 border-violet-500 text-violet-600'
+                : 'bg-white border-gray-300 text-gray-500 hover:bg-gray-50',
+              i === 0 ? 'rounded-l-md bg-gray-100 text-gray-700' : '',
+              i === comments.links.length - 1 ? 'rounded-r-md' : '',
+            ]"
+            v-html="link.label"
+          >
+          </a>
+        </nav>
+      </div>
+
     </div>
   </PageComponent>
 </template>
@@ -46,12 +75,27 @@ import PageComponent from '../components/PageComponent.vue';
 import store from "../store"
 import {computed} from 'vue';
 
-//const comments = computed(()=>store.state.comments)
+const comments = computed(()=>store.state.comments)
+store.dispatch("getComments")
 
-function deleteComment(comment){
-  if(confirm(`Voulez-vous vraiment supprimer ce commentaire "${comment.title}" ? `)){
-    //delete
+function deleteComment(comment) {
+  if (
+    confirm(
+      `Are you sure you want to delete this comment? Operation can't be undone!!`
+    )
+  ) {
+    store.dispatch("deleteComment", comment.id).then(() => {
+      store.dispatch("getComments");
+    });
   }
+}
+
+function getForPage(ev, link) {
+  ev.preventDefault();
+  if (!link.url || link.active) {
+    return;
+  }
+  store.dispatch("getComments", { url: link.url });
 }
 
 </script>

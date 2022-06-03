@@ -13,7 +13,11 @@ class UpdateCommentsRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        $comment = $this->route('comments');
+        if($this->user()->id !== $comment->user_id){
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -24,7 +28,9 @@ class UpdateCommentsRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=>'required|string|max:100',
+            'user_id'=>'exists:users,id',
+            'content'=>'required|string|max:1000',
         ];
     }
 }

@@ -13,7 +13,6 @@ class Comments extends Model
 
     protected $fillable = [
         'user_id',
-        'rating_id',
         'content',
         'title',
         'slug',
