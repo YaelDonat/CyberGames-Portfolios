@@ -37,8 +37,8 @@
 
         </div>
       </div>
-
-  <!-- PAGINATION -->
+    </div>
+    <!-- PAGINATION -->
     <div class="flex justify-center mt-5">
         <nav
           class="relative z-0 inline-flex justify-center rounded-md shadow-sm -space-x-px"
@@ -65,8 +65,6 @@
           </a>
         </nav>
       </div>
-
-    </div>
   </PageComponent>
 </template>
 
