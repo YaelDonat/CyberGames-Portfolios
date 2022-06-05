@@ -17,7 +17,7 @@ class CommentsController extends Controller
      */
     public function index(Request $request)
     {
-        $user = $request->user();
+        //$user = $request->user();
         return CommentsResource::collection(Comments::paginate(6));
     }
 
@@ -36,17 +36,18 @@ class CommentsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Comments  $comments
+     * @param  \App\Models\Comments  $comment
      * @return \Illuminate\Http\Response
      */
-    public function show(Comments $comments, Request $request)
+    public function show(Comments $comment, Request $request)
     {
         $user = $request->user();
-        if($user->id !== $comments->user_id){
+        if($user->id !== $comment->user_id){
             return abort(403,'Action non autorisée.');
+            //return response()->json($comment);
         }
 
-        return new CommentsResource($comments);
+        return new CommentsResource($comment);
     }
 
     /**
@@ -65,16 +66,16 @@ class CommentsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Comments  $comments
+     * @param  \App\Models\Comments  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Comments $comments, Request $request)
+    public function destroy(Comments $comment, Request $request)
     {
         $user = $request->user();
-        if($user->id !== $comments->user_id){
+        if($user->id !== $comment->user_id){
             return abort(403,'Action non autorisée.');
         }
-        $comments->delete();
+        $comment->delete();
         return response('',204);
     }
 }

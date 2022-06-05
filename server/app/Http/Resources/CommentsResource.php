@@ -16,11 +16,12 @@ class CommentsResource extends JsonResource
     {
         return [
             'id'=>$this->id,
+            'user_id'=>$this->user_id,
             'title'=>$this->title,
             'slug'=>$this->slug,
             'content'=>$this->content,
-            'created_at'=>$this->created_at,
-            'updated_at'=>$this->updated_at,
+            'created_at' => (new \DateTime($this->created_at))->format('Y-m-d H:i:s'),
+            'updated_at' => (new \DateTime($this->updated_at))->format('Y-m-d H:i:s'),
         ];
     }
 }

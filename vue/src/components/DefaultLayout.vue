@@ -45,7 +45,7 @@
                     <MenuItem v-slot="{ active }">
                     <a @click="logout" :class="[
                       'block px-4 py-2 text-sm text-gray-700 cursor-pointer'
-                    ]">Se déconnecter</a>
+                    ]">Se déconnecter <p class="text-violet-500 font-semibold">{{user.name}}</p></a>
                     </MenuItem>
                   </MenuItems>
                 </transition>

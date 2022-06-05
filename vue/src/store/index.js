@@ -2,42 +2,10 @@ import axios from 'axios';
 import { createStore } from "vuex";
 import axiosClient from '../axios';
 
-/*const tmpComments = [
-    {
-        id: 1,
-        user_id: 6,
-        ratings_id: 1,
-        content: "Test de commentaire pour notre magnifique jeu vidéo",
-        title : "Titre de test" ,
-        created_at: "2022-05-10 13:00",
-        updated_at: "2022-05-10 13:00",
-    },
-
-    {
-        id: 2,
-        user_id: 6,
-        ratings_id: 2,
-        title : "Titre de test 2",
-        content: "Test de commentaire pour notre magnifique jeu vidéo 2ème du nom",
-        created_at: "2022-05-10 13:00",
-        updated_at: "2022-05-10 13:00",
-    },
-
-     {
-        id: 3,
-        user_id: 6,
-        ratings_id: 3,
-        title : "Titre de test 3",
-        content: "Test de commentaire pour notre magnifique jeu vidéo 3ème du nom",
-        created_at: "2022-05-10 13:00",
-        updated_at: "2022-05-10 13:00",
-    },
-];
-*/
 const store = createStore({
     state: {
         user: {
-            data: {},
+            data: {id:sessionStorage.getItem('id') ,name : sessionStorage.getItem('name'), email : sessionStorage.getItem('email')},
             token: sessionStorage.getItem("TOKEN"),
         },
         currentComment: {
@@ -51,6 +19,7 @@ const store = createStore({
         },
         //comments: [...tmpComments],
         comments:{
+            loading:false,
             data:[],
             links:[],
         },
@@ -102,14 +71,16 @@ const store = createStore({
         register({ commit }, user){
             return axiosClient.post('/register', user)
             .then(({ data }) => {
-                commit('setUser', data);
+                commit('setUser', data.user);
+                commit('setToken', data.user);
                 return data;
             })
         },
         login({ commit }, user){
             return axiosClient.post('/login', user)
             .then(({ data }) => {
-                commit('setUser', data);
+                commit('setUser', data.user);
+                commit('setToken', data.token)
                 return data;
             })
         },
@@ -145,10 +116,12 @@ const store = createStore({
             });
         },
         getComment({commit},id){
+            commit("setCurrentCommentLoading", true);
             return axiosClient
             .get(`/comments/${id}`)
             .then((res)=>{
                 commit("setCurrentComment", res.data);
+                commit("setCurrentCommentLoading", false);
                 return res;
             })
             .catch((err)=>{
@@ -156,9 +129,11 @@ const store = createStore({
             })
         },
         getComments({ commit }, {url = null} = {}) {
+            commit('setCommentsLoading', true)
             url = url || "/comments";
             return axiosClient.get(url).then((res) => { 
-            commit("setComments", res.data);
+                commit("setComments", res.data);
+                commit('setCommentsLoading', false)
             return res;
             });
         },
@@ -168,14 +143,21 @@ const store = createStore({
         logout: (state) => {
             state.user.data = {};
             state.user.token = null;
-            sessionStorage.clear();
+            sessionStorage.removeItem('TOKEN');
+            sessionStorage.removeItem('name');
+            sessionStorage.removeItem('id');
+            sessionStorage.removeItem('email');
         },
-        setUser: (state, userData) => {
-            state.user.token = userData.token;
-            state.user.data = userData.data;
-            sessionStorage.setItem('TOKEN', userData.token);
-            sessionStorage.setItem('UserPseudo', userData.data);
-        },
+        setUser: (state, user) => {
+            state.user.data = user
+            sessionStorage.setItem('name', user.name);
+            sessionStorage.setItem('id', user.id);
+            sessionStorage.setItem('email', user.email);
+          },
+          setToken: (state, token) => {
+            state.user.token = token;
+            sessionStorage.setItem('TOKEN', token);
+          },
         saveComment:(state,comment)=>{
             state.comments = [...state.comments, comment.data];
         },
@@ -202,6 +184,12 @@ const store = createStore({
             setTimeout(() => {
             state.notification.show = false;
             }, 3000)
+        },
+        setCurrentCommentLoading: (state, loading) => {
+            state.currentComment.loading = loading;
+        },
+        setCommentsLoading: (state, loading) => {
+            state.comments.loading = loading;
         },
     },
 

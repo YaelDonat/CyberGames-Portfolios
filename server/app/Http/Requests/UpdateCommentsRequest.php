@@ -29,7 +29,7 @@ class UpdateCommentsRequest extends FormRequest
     {
         return [
             'title'=>'required|string|max:100',
-            'user_id'=>'exists:users,id',
+            'user_id' => 'exists:users,id',
             'content'=>'required|string|max:1000',
         ];
     }

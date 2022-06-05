@@ -3,11 +3,12 @@
         <template v-slot:header>
             <div class="flex item-center justify-between">
                 <h1 class="text-3xl font-bold text-gray-50">
-                {{ route.params.id ? model.title : "Ajoutez un commentaire" }}
+                {{ route.params.id ? model.title.toUpperCase() : "Ajoutez un commentaire" }}
                 </h1>
             </div>
         </template>
-        <form @submit.prevent="saveComment">
+        <div v-if="commentLoading" class="flex justify-center">Chargement...</div>
+        <form v-else @submit.prevent="saveComment">
             <div class="shadow sm:rounded-md sm-overflow-hidden">
                 <!-- Comments Fiels-->
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6 rounded-sm text-black">
@@ -49,30 +50,35 @@
 <script setup>
 import PageComponent from "../components/PageComponent.vue";
 import store from "../store";
-import { ref, watch } from "vue";
+import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
+// Get survey loading state, which only changes when we fetch survey from backend
+const commentLoading = computed(() => store.state.currentComment.loading);
+
 let model = ref({
     title : "",
+    slug:"",
     content :null,
 });
 
-//watch the current comment data change and when this happens
+// Watch to current Comment data change and when this happens we update local model
 watch(
   () => store.state.currentComment.data,
   (newVal, oldVal) => {
     model.value = {
       ...JSON.parse(JSON.stringify(newVal)),
-      status: !!newVal.status,
     };
   }
 );
 
+
+
 if(route.params.id){
-    store.dispatch('getComment', route.params.id);
+    store.dispatch("getComment", route.params.id);
 };
 
 function saveComment() {
@@ -105,18 +111,6 @@ function deleteComment() {
     });
   }
 }
-
-//function saveComment(){
-//    store.dispatch("saveComment",model.value).then(({data})=>{
-//        router.push({
-//            name:"CommentsShow",
-//            params:{id:data.data.id},
-//        })
-//    });
-//}
-
-
-
 </script>
 
 <style>
