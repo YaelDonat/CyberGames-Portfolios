@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Comments::class);
     }
+
+    public function ratings()
+    {
+        return $this->hasOne(Ratings::class);
+    }
 }

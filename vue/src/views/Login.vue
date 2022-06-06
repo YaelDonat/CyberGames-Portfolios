@@ -10,8 +10,8 @@
                 <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <div class="w-full">
                         <div class="flex justify-center">
-                            <img class="mx-auto h-12 w-auto dark:bg-white dark:rounded-full"
-                                src="../assets/images/cybericon.svg" alt="Workflow" />
+                            <img class="mx-auto h-24 w-auto dark:bg-white dark:rounded-full"
+                                src="../assets/images/others/logoTDS.webp" alt="Workflow" />
                         </div>
                         <br>
                         <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">

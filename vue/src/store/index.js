@@ -23,6 +23,12 @@ const store = createStore({
             data:[],
             links:[],
         },
+        ratings:{
+            data:[],
+        },
+        currentRating:{
+            data:{}
+        },
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
@@ -64,7 +70,10 @@ const store = createStore({
     getters: {
         comments:state=>{
             return state.comments
-        }
+        },
+        ratings:state=>{
+            return state.ratings;
+        },
     },
 
     actions: {
@@ -98,7 +107,7 @@ const store = createStore({
                 response = axiosClient
                 .put(`/comments/${comment.id}`,comment)
                 .then((res)=>{
-                    commit("updateComment",res.data);
+                    commit("setCurrentComment",res.data);
                     return res;
                 });
             } else{
@@ -160,14 +169,6 @@ const store = createStore({
           },
         saveComment:(state,comment)=>{
             state.comments = [...state.comments, comment.data];
-        },
-        updateComment:(state,comment)=>{
-            state.comments = state.comments.map((c)=>{
-                if(c.id == comment.data.id){
-                    return comment.data;
-                }
-                return c;
-            });
         },
         setCurrentComment:(state,comment)=>{
             state.currentComment.data = comment.data;

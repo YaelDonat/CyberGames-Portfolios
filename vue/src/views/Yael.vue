@@ -87,7 +87,7 @@
               </div>
               <div class="flex justify-around items-center space-x-4">
                 <div><fa icon="phone"/></div>
-                <div><h4 class="sm:text-base 2xl:text-xl text-black lg:leading-loose sm:leading-relaxed sm:tracking-relaxed">+33 24 41 65 15</h4></div>
+                <div><h4 class="sm:text-base 2xl:text-xl text-black lg:leading-loose sm:leading-relaxed sm:tracking-relaxed">+33 6 24 41 65 15</h4></div>
               </div>
               <div class="flex justify-around items-center space-x-4">
                 <div><fa icon="male"/></div>

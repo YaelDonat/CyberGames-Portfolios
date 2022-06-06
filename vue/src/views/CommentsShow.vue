@@ -7,7 +7,11 @@
                 </h1>
             </div>
         </template>
-        <div v-if="commentLoading" class="flex justify-center">Chargement...</div>
+        
+        <div v-if="commentLoading" class="flex justify-center">
+          <fa :icon="['fa','spinner']" class=" animate-spin h-5 w-5 mr-3 ..." />
+          Chargement...
+        </div>
         <form v-else @submit.prevent="saveComment">
             <div class="shadow sm:rounded-md sm-overflow-hidden">
                 <!-- Comments Fiels-->
@@ -92,8 +96,10 @@ function saveComment() {
       message: "The comment was successfully " + action,
     });
     router.push({
-      name: "CommentsShow",
-      params: { id: data.data.id },
+      //name: "CommentsShow",
+      //params: { id: data.data.id },
+      name: "Comments",
+      params: {},
     });
   });
 };

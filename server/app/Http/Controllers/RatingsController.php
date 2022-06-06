@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\RatingsResource;
+use App\Http\Requests\StoreRatingsRequest;
+use App\Http\Requests\UpdateRatingsRequest;
 use App\Models\Ratings;
 use Illuminate\Http\Request;
 
@@ -12,74 +15,66 @@ class RatingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $user = $request->user();
+        return RatingsResource::collection(Ratings::all());
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Http\Requests\StoreRatingsRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreRatingsRequest $request)
     {
-        //
+        $result = Ratings::create($request->validated());
+        return new RatingsResource($result);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Ratings  $ratings
+     * @param \App\Models\Ratings $rating
      * @return \Illuminate\Http\Response
      */
-    public function show(Ratings $ratings)
+    public function show(Ratings $rating, Request $request)
     {
-        //
-    }
+        $user = $request->user();
+        if($user->id !== $rating->user_id){
+            return abort(403,'Action non autorisée.');
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Ratings  $ratings
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Ratings $ratings)
-    {
-        //
+        return new RatingsResource($rating);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Ratings  $ratings
+     * @param  \App\Http\Requests\UpdateRatingsRequest $request
+     * @param  \App\Models\Ratings $rating
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ratings $ratings)
+    public function update(UpdateRatingsRequest $request, Ratings $rating)
     {
-        //
+        $rating->update($request->validated());
+        return new RatingsResource($rating);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ratings  $ratings
+     * @param  \App\Models\Ratings  $rating
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ratings $ratings)
+    public function destroy(Ratings $rating, Request $request)
     {
-        //
+        $user = $request->user();
+        if($user->id !== $rating->user_id){
+            return abort(403,'Action non autorisée.');
+        }
+        $rating->delete();
+        return response('',204);
     }
 }

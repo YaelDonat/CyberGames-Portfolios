@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Ratings extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'user_id',
+        'rate',
+    ];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

@@ -4,8 +4,8 @@
 export default{
     mounted () {
   document.body.classList.add('scrollbar-thin')
-  document.body.classList.add('scrollbar-thumb-violet-300')
-  document.body.classList.add('scrollbar-track-white')
+  document.body.classList.add('scrollbar-thumb-blue-600')
+  document.body.classList.add('scrollbar-track-amber-50')
 },
 }
   
