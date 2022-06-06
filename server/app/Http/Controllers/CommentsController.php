@@ -54,13 +54,13 @@ class CommentsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateCommentsRequest  $request
-     * @param  \App\Models\Comments  $comments
+     * @param  \App\Models\Comments  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCommentsRequest $request, Comments $comments)
+    public function update(UpdateCommentsRequest $request, Comments $comment)
     {
-        $comments->update($request->validated());
-        return new CommentsResource($comments);
+        $comment->update($request->validated());
+        return new CommentsResource($comment);
     }
 
     /**

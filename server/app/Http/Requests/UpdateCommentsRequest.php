@@ -13,7 +13,7 @@ class UpdateCommentsRequest extends FormRequest
      */
     public function authorize()
     {
-        $comment = $this->route('comments');
+        $comment = $this->route('comment');
         if($this->user()->id !== $comment->user_id){
             return false;
         }
