@@ -118,6 +118,23 @@ const store = createStore({
             }
             return response;
         },
+        saveRating({commit},rating){
+            let response;
+            if(rating.id){
+                response = axiosClient
+                .put(`/ratings/${rating.id}`,rating)
+                .then((res)=>{
+                    commit("setCurrentRating",res.data);
+                    return res;
+                });
+            } else{
+                response = axiosClient.post("/ratings/",rating).then((res)=>{
+                    commit('setCurrentRating', res.data)
+                    return res;
+                });
+            }
+            return response;
+        },
         deleteComment({ dispatch }, id) {
             return axiosClient.delete(`/comments/${id}`).then((res) => {
             dispatch('getComments')
@@ -146,6 +163,26 @@ const store = createStore({
             return res;
             });
         },
+
+        getRating({commit},id){
+            return axiosClient
+            .get(`/ratings/${id}`)
+            .then((res)=>{
+                commit("setCurrentRating", res.data);
+                return res;
+            })
+            .catch((err)=>{
+                throw err;
+            })
+        },
+
+        getRatings({ commit }, {url = null} = {}) {
+            url = url || "/ratings";
+            return axiosClient.get(url).then((res) => { 
+                commit("setRatings", res.data);
+            return res;
+            });
+        },
     },
 
     mutations: {
@@ -162,11 +199,11 @@ const store = createStore({
             sessionStorage.setItem('name', user.name);
             sessionStorage.setItem('id', user.id);
             sessionStorage.setItem('email', user.email);
-          },
-          setToken: (state, token) => {
+        },
+        setToken: (state, token) => {
             state.user.token = token;
             sessionStorage.setItem('TOKEN', token);
-          },
+        },
         saveComment:(state,comment)=>{
             state.comments = [...state.comments, comment.data];
         },
@@ -176,6 +213,16 @@ const store = createStore({
         setComments: (state, comments) => {
             state.comments.links = comments.meta.links;
             state.comments.data = comments.data;
+        },
+
+        saveRating:(state,rating)=>{
+            state.ratings = [...state.ratings, rating.data];
+        },
+        setCurrentRating:(state,rating)=>{
+            state.currentRating.data = rating.data;
+        },
+        setRatings: (state, ratings) => {
+            state.ratings.data = ratings.data;
         },
         
         notify: (state, {message, type}) => {

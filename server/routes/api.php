@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentsController;
+use App\Http\Controllers\RatingsController;
+use App\Models\Ratings;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +25,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     Route::resource('/comments',CommentsController::class);
+    Route::resource('/ratings', RatingsController::class);
 });
 
 Route::post('/register', [AuthController::class, 'register']);

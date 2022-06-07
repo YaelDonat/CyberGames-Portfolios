@@ -31,8 +31,8 @@ class StoreRatingsRequest extends FormRequest
     public function rules()
     {
         return [
-            'rate'=>'required|int',
             'user_id'=>'exists:users,id',
+            'rate'=>'required',
         ];
     }
 }

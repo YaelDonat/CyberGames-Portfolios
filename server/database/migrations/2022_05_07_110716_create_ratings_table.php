@@ -11,15 +11,22 @@ return new class extends Migration
      *
      * @return void
      */
+    
     public function up()
-    {
+    {   
         Schema::create('ratings', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('user_id')->constrained('users');
+            $table->integer('user_id')->unsigned()->index()->nullable();
+            $table->primary('user_id')->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->integer('rate');
             $table->timestamps();
         });
     }
+
+   
 
     /**
      * Reverse the migrations.

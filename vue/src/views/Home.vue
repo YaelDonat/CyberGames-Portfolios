@@ -2,7 +2,7 @@
   <PageComponent title="Home">
     <div class="text-gray-900 dark:text-white">
 
-      <div class="grid grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg" style="background-image: url('../src/assets/images/Others/landscape.webp');">
+      <div class="grid grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg border-4 border-[#759296]" style="background-image: url('../src/assets/images/Others/landscape.webp');">
 
        <p class="mx-auto h-fit py-10 px-10 rounded-lg text-6xl text-black font-bold font-zcoolkuaiLe ">
           INNER <br> ‎ ‎ ‎  CHAOS
@@ -15,7 +15,7 @@
           nouvel essai.
           </p>
         </div>
-        <button class="mt-2 p-5 w-fit min-h-full rounded-lg bg-black bg-opacity-[30%] hover:bg-opacity-100 hover:ease-in duration-300 hover:animate-bounce font-zcoolkuaiLe" >
+        <button class="mt-2 p-5 w-fit min-h-full rounded-lg dark:bg-black bg-white bg-opacity-[30%] hover:bg-opacity-100 hover:ease-in duration-300 font-zcoolkuaiLe" >
           <fa :icon="['fa','download']" class="pr-2"/>TELECHARGER MAINTENANT
         </button>
         <div class="relative min-w-full min-h-[0%]"></div>
@@ -24,8 +24,8 @@
        <!-- Game images loop -->
       <div class="grid grid-cols-3 gap-10 mt-[5%] ">
         <div v-for="(img, index) in gameImg" class="mx-auto">
-          <label :for="img.slug" class="block text-md font-sans">{{img.title}}</label>
-          <img :key="index" :src="img.name" class="rounded-lg" :alt="img.slug" :id="img.slug" />
+          <label :for="img.slug" class="block text-md text-center text-lg font-semibold text-black ">{{img.title}}</label>
+          <img :key="index" :src="img.name" class="rounded-lg border-2 border-[#759296]" :alt="img.slug" :id="img.slug" />
         </div>
       </div>
     </div> 

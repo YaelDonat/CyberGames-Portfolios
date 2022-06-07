@@ -13,8 +13,8 @@ class UpdateRatingsRequest extends FormRequest
      */
     public function authorize()
     {
-        $comment = $this->route('comment');
-        if($this->user()->id !== $comment->user_id){
+        $rating = $this->route('rating');
+        if($this->user()->id !== $rating->user_id){
             return false;
         }
         return true;
@@ -28,8 +28,8 @@ class UpdateRatingsRequest extends FormRequest
     public function rules()
     {
         return [
-            'rate'=>'required|int',
             'user_id'=>'exists:users,id',
+            'rate'=>'required',
         ];
     }
 }

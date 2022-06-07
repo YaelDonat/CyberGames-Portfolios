@@ -12,7 +12,7 @@
           <fa :icon="['fa','spinner']" class=" animate-spin h-5 w-5 mr-3 ..." />
           Chargement...
         </div>
-        <form v-else @submit.prevent="saveComment">
+        <form v-else @submit.prevent="saveComment() ; saveRating()">
             <div class="shadow sm:rounded-md sm-overflow-hidden">
                 <!-- Comments Fiels-->
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6 rounded-sm text-black">
@@ -34,6 +34,7 @@
                         <div class="mt-1">
                             <textarea id="content" name="content" row="3" v-model="model.content" autocomplete="comment_content" class="shadow-sm focus:ring-violet-500 focus:border-violet-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Entrez votre commentaire ici"
                         />
+                        <starRatings id="rate" name="rate" v-model="model.rate" type="number" inactiveColor="#2e5090" :showControl="false" :step="0.5"  />
                         </div>
                     </div>
                 </div>
@@ -56,6 +57,7 @@ import PageComponent from "../components/PageComponent.vue";
 import store from "../store";
 import { ref, watch, computed } from "vue";
 import { useRouter, useRoute } from "vue-router";
+import starRatings from 'vue3-star-ratings';
 
 const router = useRouter();
 const route = useRoute();
@@ -67,11 +69,13 @@ let model = ref({
     title : "",
     slug:"",
     content :null,
+    rate:null,
 });
 
 // Watch to current Comment data change and when this happens we update local model
 watch(
   () => store.state.currentComment.data,
+  //() =>store.state.currentRating.data,
   (newVal, oldVal) => {
     model.value = {
       ...JSON.parse(JSON.stringify(newVal)),
@@ -83,6 +87,7 @@ watch(
 
 if(route.params.id){
     store.dispatch("getComment", route.params.id);
+    store.dispatch("getRating", store.state.user.data.id);
 };
 
 function saveComment() {
@@ -102,6 +107,19 @@ function saveComment() {
       params: {},
     });
   });
+};
+
+function saveRating(){
+  let action = "created";
+  if (model.value.id) {
+    action = "updated";
+  }
+  store.dispatch("saveRating", { ...model.value } ).then(({ data }) => {
+    store.commit("notify", {
+      type: "success",
+      message: "The rating was successfully " + action,
+    });
+  })
 };
 
 function deleteComment() {
