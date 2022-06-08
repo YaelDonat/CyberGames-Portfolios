@@ -15,9 +15,8 @@ class RatingsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $user = $request->user();
         return RatingsResource::collection(Ratings::all());
     }
 
@@ -65,7 +64,7 @@ class RatingsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Ratings  $rating
+     * @param  \App\Models\Ratings $rating
      * @return \Illuminate\Http\Response
      */
     public function destroy(Ratings $rating, Request $request)

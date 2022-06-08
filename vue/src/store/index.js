@@ -120,9 +120,9 @@ const store = createStore({
         },
         saveRating({commit},rating){
             let response;
-            if(rating.id){
+            if(rating.user_id){
                 response = axiosClient
-                .put(`/ratings/${rating.id}`,rating)
+                .put(`/ratings/${rating.user_id}`,rating)
                 .then((res)=>{
                     commit("setCurrentRating",res.data);
                     return res;
