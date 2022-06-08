@@ -34,7 +34,7 @@
                         <div class="mt-1">
                             <textarea id="content" name="content" row="3" v-model="model.content" autocomplete="comment_content" class="shadow-sm focus:ring-violet-500 focus:border-violet-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md" placeholder="Entrez votre commentaire ici"
                         />
-                        <starRatings id="rate" name="rate" v-model="model.rate" type="number" inactiveColor="#2e5090" :showControl="false" :step="0.5"  />
+                        <starRatings id="rate" name="rate" v-model="modelRate.rate" type="number" inactiveColor="#2e5090" :showControl="false" :step="0.5" class="border-0"  />
                         </div>
                     </div>
                 </div>
@@ -64,26 +64,36 @@ const route = useRoute();
 
 // Get survey loading state, which only changes when we fetch survey from backend
 const commentLoading = computed(() => store.state.currentComment.loading);
+const currentRate = computed(() => store.state.currentRating.data.rate);
 
 let model = ref({
     title : "",
     slug:"",
     content :null,
-    rate:null,
+});
+
+let modelRate =ref({
+  rate:currentRate
 });
 
 // Watch to current Comment data change and when this happens we update local model
 watch(
   () => store.state.currentComment.data,
-  //() =>store.state.currentRating.data,
   (newVal, oldVal) => {
     model.value = {
       ...JSON.parse(JSON.stringify(newVal)),
     };
   }
 );
-
-
+// Watch to current Rating data
+watch(
+  () => store.state.currentRating.data,
+  (newVal, oldVal) => {
+    modelRate.value = {
+      ...JSON.parse(JSON.stringify(newVal)),
+    };
+  }
+); 
 
 if(route.params.id){
     store.dispatch("getComment", route.params.id);
@@ -101,8 +111,6 @@ function saveComment() {
       message: "The comment was successfully " + action,
     });
     router.push({
-      //name: "CommentsShow",
-      //params: { id: data.data.id },
       name: "Comments",
       params: {},
     });
@@ -111,10 +119,10 @@ function saveComment() {
 
 function saveRating(){
   let action = "created";
-  if (model.value.id) {
+  if (modelRate.value.id) {
     action = "updated";
   }
-  store.dispatch("saveRating", { ...model.value } ).then(({ data }) => {
+  store.dispatch("saveRating", { ...modelRate.value } ).then(({ data }) => {
     store.commit("notify", {
       type: "success",
       message: "The rating was successfully " + action,

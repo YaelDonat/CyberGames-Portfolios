@@ -25,18 +25,22 @@
           <div v-for="comment in comments.data" :key="comments.id" class="flex flex-col py-4 px-6 mb-5 shadow-sm bg-white hover:bg-gray-100 rounded-lg h-[400px] w-3/4">
             <h4 class="mt-4 text-xl font-bold "> {{comment.title.toUpperCase()}}</h4>
             <p v-html="comment.content" class="overflow-hidden break-words flex-1"></p>
+            <div v-for="rating in ratings.data">
+              <starRatings v-model="rating.rate" v-if="rating.user_id==comment.user_id" starSize="20" type="number" inactiveColor="#2e5090" :showControl="false" :disableClick="true" :step="0.5" class=" border-0 bg-transparent "/>
+            </div>
+
             <div class="flex justify-between items-center mt-3">
-            <router-link  v-if="userdata.id == comment.user_id" :to=" { name:'CommentsShow', params: {id:comment.id} }" class="flex py-2 px-4 border border-transparent text-sm rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
-              <fa :icon="['fa','pen']" class="h-5 w-5 mr-2" />
-              Modifier
-            </router-link>
-            <button v-if="comment.id && userdata.id == comment.user_id "
-              type="button"
-              @click="deleteComment(comment)"
-              class="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-sm text-red-500 focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-              >
-              <fa :icon="['fa','trash']" class="h-5 w-5 -mt-1 inline-block" />
-            </button>
+              <router-link  v-if="userdata.id == comment.user_id" :to=" { name:'CommentsShow', params: {id:comment.id} }" class="flex py-2 px-4 border border-transparent text-sm rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
+                <fa :icon="['fa','pen']" class="h-5 w-5 mr-2" />
+                Modifier
+              </router-link>
+              <button v-if="comment.id && userdata.id == comment.user_id "
+                type="button"
+                @click="deleteComment(comment)"
+                class="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-sm text-red-500 focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                >
+                <fa :icon="['fa','trash']" class="h-5 w-5 -mt-1 inline-block" />
+              </button>
           </div>
         </div>
       </div>
@@ -76,8 +80,10 @@
 
 <script setup>
 import PageComponent from '../components/PageComponent.vue';
-import store from "../store"
+import store from "../store";
 import {computed, watch} from 'vue';
+import starRatings from 'vue3-star-ratings';
+
 
 const comments = computed(()=>store.state.comments)
 const userdata = computed(()=>store.state.user.data)
