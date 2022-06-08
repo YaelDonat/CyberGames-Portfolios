@@ -73,7 +73,7 @@ let model = ref({
 });
 
 let modelRate =ref({
-  rate:currentRate
+  rate:currentRate,
 });
 
 // Watch to current Comment data change and when this happens we update local model
@@ -95,8 +95,11 @@ watch(
   }
 ); 
 
+
 if(route.params.id){
     store.dispatch("getComment", route.params.id);
+    store.dispatch("getRating", store.state.user.data.id);
+}else{
     store.dispatch("getRating", store.state.user.data.id);
 };
 

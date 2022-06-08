@@ -60,14 +60,14 @@
     <!-- CV -->
     <p class="text-center text-white text-4xl pt-10">Mon CV</p>
     <div class="px-20 pt-8 min-h-screen max-w-7xl mx-auto">
-        <div class="bg-white shadow-xl rounded grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3">
+        <div class="bg-slate-300 shadow-xl rounded grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-3">
           <!-- Left section -->
-          <div class="row-span-1 col-span-1 space-y-4 pt-20 bg-gradient-to-b from-emerald-200 to-violet-200 dark:from-emerald-200 dark:to-violet-400">
+          <div class="row-span-1 col-span-1 rounded-l-[50%] space-y-4 pt-20 bg-gradient-to-b from-emerald-200 to-violet-200 dark:from-emerald-200 dark:to-violet-400">
 
             <!-- Image and name -->
             <div class="flex flex-col justify-start items-center pb-8">
               <div>
-                <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-full ring-2 ring-white object-cover mb-4"  src='../assets/images/portfolioY/ppcv_yael.jpg' alt="me">
+                <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-full ring-2 ring-white object-cover mb-4"  src='../assets/images/portfolioY/ppcv_yael.webp' alt="me">
               </div>
               <div>
                 <h1 class="text-gray-800 text-3xl font-semibold mb-2">DONAT Yaël</h1>

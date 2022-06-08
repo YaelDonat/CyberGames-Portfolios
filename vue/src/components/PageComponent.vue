@@ -11,7 +11,7 @@
       </div>
     </header>
     <main>
-      <div class="max-w-full mx-auto py-0 sm:px-2 lg:px-4 bg-[rgb(202,200,200)] min-h-screen">
+      <div class="max-w-full mx-auto py-0 sm:px-2 lg:px-4 bg-gradient-to-b from-[rgb(202,200,200)] via-[#759296] to-[#668083] min-h-screen">
         <!-- Replace with your content -->
         <div class="px-4 py-2 sm:px-0 text-white">
           <slot></slot>

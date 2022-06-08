@@ -1,10 +1,10 @@
 <template>
-  <PageComponent title="Home">
+  <PageComponent title="">
     <div class="text-gray-900 dark:text-white">
 
-      <div class="grid grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg border-4 border-[#759296]" style="background-image: url('../src/assets/images/Others/landscape.webp');">
+      <div class="grid drop-shadow-2xl grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg border-4 border-[#759296]" style="background-image: url('../src/assets/images/Others/landscape.webp');">
 
-       <p class="mx-auto h-fit py-10 px-10 rounded-lg text-6xl text-black font-bold font-zcoolkuaiLe ">
+       <p class="mx-auto  h-fit py-10 px-10 rounded-lg text-6xl text-black font-bold font-zcoolkuaiLe ">
           INNER <br> ‎ ‎ ‎  CHAOS
         </p>
         <div class="p-1 mb-3 w-3/5 min-h-fit rounded-lg animate-animatedgradient " >
@@ -15,17 +15,17 @@
           nouvel essai.
           </p>
         </div>
-        <button class="mt-2 p-5 w-fit min-h-full rounded-lg dark:bg-black bg-white bg-opacity-[30%] hover:bg-opacity-100 hover:ease-in duration-300 font-zcoolkuaiLe" >
+        <button class="mt-2 p-5 w-fit min-h-full rounded-lg dark:bg-black dark:bg-opacity-[30%] bg-white bg-opacity-[30%] dark:hover:bg-opacity-100 hover:bg-opacity-100 hover:ease-in duration-300 font-zcoolkuaiLe" >
           <fa :icon="['fa','download']" class="pr-2"/>TELECHARGER MAINTENANT
         </button>
         <div class="relative min-w-full min-h-[0%]"></div>
       </div>
 
        <!-- Game images loop -->
-      <div class="grid grid-cols-3 gap-10 mt-[5%] ">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mt-[5%] ">
         <div v-for="(img, index) in gameImg" class="mx-auto">
           <label :for="img.slug" class="block text-md text-center text-lg font-semibold text-black ">{{img.title}}</label>
-          <img :key="index" :src="img.name" class="rounded-lg border-2 border-[#759296]" :alt="img.slug" :id="img.slug" />
+          <img :key="index" :src="img.name" class="rounded-lg border-2 drop-shadow-2xl border-[#979696]" :alt="img.slug" :id="img.slug" />
         </div>
       </div>
     </div> 

@@ -23,7 +23,7 @@
         <div class="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3 text-black place-items-center">
           <!-- Comments -->
           <div v-for="comment in comments.data" :key="comments.id" class="flex flex-col py-4 px-6 mb-5 shadow-sm bg-white hover:bg-gray-100 rounded-lg h-[400px] w-3/4">
-            <h4 class="mt-4 text-xl font-bold "> {{comment.title.toUpperCase()}}</h4>
+            <h4 class="mt-4 text-xl font-bold break-words "> {{comment.title.toUpperCase()}}</h4>
             <p v-html="comment.content" class="overflow-hidden break-words flex-1"></p>
             <div v-for="rating in ratings.data">
               <starRatings v-model="rating.rate" v-if="rating.user_id==comment.user_id" starSize="20" type="number" inactiveColor="#2e5090" :showControl="false" :disableClick="true" :step="0.5" class=" border-0 bg-transparent "/>
