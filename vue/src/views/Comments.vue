@@ -20,7 +20,7 @@
         Chargement...
       </div>
       <div v-else-if="comments.data.length">
-        <div class="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3 text-black place-items-center">
+        <div class="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-3 text-black place-items-center opacity-0 animate-fade-in-down">
           <!-- Comments -->
           <div v-for="comment in comments.data" :key="comments.id" class="flex flex-col py-4 px-6 mb-5 shadow-sm bg-white hover:bg-gray-100 rounded-lg h-[400px] w-3/4">
             <h4 class="mt-4 text-xl font-bold break-words "> {{comment.title.toUpperCase()}}</h4>

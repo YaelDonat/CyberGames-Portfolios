@@ -92,6 +92,7 @@
 
     <!-- Content -->
     <router-view></router-view>
+    <Notification/>
   </div>
 </template>
 
@@ -102,6 +103,7 @@ import Button from '../components/reusable/Button.vue'
 import { useStore } from 'vuex'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import Notification from './Notification.vue'
 
 const navigation = [
   { name: 'Accueil', to: { name: 'Home' } },
@@ -130,6 +132,7 @@ export default {
     BellIcon,
     MenuIcon,
     XIcon,
+    Notification,
   },
   setup() {
 

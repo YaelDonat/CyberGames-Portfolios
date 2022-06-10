@@ -14,10 +14,9 @@ const store = createStore({
         },
         notification: {
             show: false,
-            type: 'success',
-            message: ''
+            type: null,
+            message: null,
         },
-        //comments: [...tmpComments],
         comments:{
             loading:false,
             data:[],
@@ -231,7 +230,7 @@ const store = createStore({
             state.notification.message = message;
             setTimeout(() => {
             state.notification.show = false;
-            }, 3000)
+            }, 5000)
         },
         setCurrentCommentLoading: (state, loading) => {
             state.currentComment.loading = loading;

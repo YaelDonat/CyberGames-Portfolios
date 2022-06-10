@@ -104,14 +104,14 @@ if(route.params.id){
 };
 
 function saveComment() {
-  let action = "created";
+  let action = "créé";
   if (model.value.id) {
-    action = "updated";
+    action = "mis à jour";
   }
   store.dispatch("saveComment", { ...model.value }).then(({ data }) => {
     store.commit("notify", {
       type: "success",
-      message: "The comment was successfully " + action,
+      message: "Le commentaire a été " + action + " avec succès !",
     });
     router.push({
       name: "Comments",
@@ -121,14 +121,14 @@ function saveComment() {
 };
 
 function saveRating(){
-  let action = "created";
-  if (modelRate.value.id) {
-    action = "updated";
+  let action = "créée";
+  if (modelRate.value.user_id) {
+    action = "mis à jour";
   }
   store.dispatch("saveRating", { ...modelRate.value } ).then(({ data }) => {
     store.commit("notify", {
       type: "success",
-      message: "The rating was successfully " + action,
+      message: "La note à été " + action + " avec succès !",
     });
   })
 };

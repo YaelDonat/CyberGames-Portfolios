@@ -20,6 +20,7 @@ module.exports = {
       },
       animation : {
         animatedgradient : 'animatedgradient 3s linear infinite',
+        'fade-in-down': 'fade-in-down 0.2s ease-in-out both'
       },
       
       keyframes:{
@@ -39,6 +40,16 @@ module.exports = {
               'background-position':'right',
               'background-size':'200% 200%',
             },
+        },
+        'fade-in-down':{
+          "from":{
+            'transform' :'translateY(-0.75rem)',
+            'opacity' : '0',
+          },
+          "to":{
+            transform :'translateY(0rem)',
+            'opacity' : '1',
+          },
         },
       },
 
