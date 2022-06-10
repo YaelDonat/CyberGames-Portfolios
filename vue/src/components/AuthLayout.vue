@@ -1,5 +1,5 @@
 <template>
-        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800" >
+        <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[rgb(202,200,200)] via-[#759296] to-[#668083]" >
             <div class="grid-cols-2 w-full space-y-80">
             <router-view></router-view>
             </div>    

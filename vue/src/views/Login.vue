@@ -1,6 +1,6 @@
 <template>
 
-    <div class="flex items-center max-h-screen bg-gray-50">
+    <div class="flex items-center max-h-screen ">
         <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-xl">
             <div class="flex flex-col md:flex-row">
                 <div class="h-32 md:h-auto md:w-1/2">
