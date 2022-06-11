@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rules\Password;
 use App\Models\User;
+use App\Notifications\WelcomeEmailNotification;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Testing\Fluent\Concerns\Has;
 
@@ -33,6 +34,8 @@ class AuthController extends Controller
         ]);
 
         $token = $user->createToken('main')->plainTextToken;
+
+        $user->notify(new WelcomeEmailNotification());
 
         return response([
             'user' => $user,
