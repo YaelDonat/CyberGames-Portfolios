@@ -73,7 +73,7 @@ let model = ref({
 });
 
 let modelRate =ref({
-  rate:currentRate,
+  rate:currentRate ? null:null,
 });
 
 // Watch to current Comment data change and when this happens we update local model
