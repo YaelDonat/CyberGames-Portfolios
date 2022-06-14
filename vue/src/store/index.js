@@ -99,6 +99,9 @@ const store = createStore({
                 return response;
             })
         },
+        reset({commit},email){
+            return axiosClient.post('/reset')
+        },
         
         saveComment({commit},comment){
             let response;

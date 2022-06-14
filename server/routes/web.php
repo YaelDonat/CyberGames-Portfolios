@@ -1,5 +1,6 @@
 <?php
 
+use App\Mail\UserRegistered;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send-email', 'App\Http\Controllers\MailController@sendEmail');   
+Route::get('/send-email', 'App\Http\Controllers\MailController@sendEmail');
+Route::get('/email', function(){
+    return new UserRegistered();
+});

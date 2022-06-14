@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\EmailDemo;
+use App\Mail\UserRegistered;
 use Symfony\Component\HttpFoundation\Response;
 
 class MailController extends Controller
@@ -17,7 +18,7 @@ class MailController extends Controller
             'url' => 'https://www.positronx.io'
         ];
   
-        Mail::to($email)->send(new EmailDemo($mailData));
+        Mail::to($email)->send(new UserRegistered($mailData));
    
         return response()->json([
             'message' => 'Email has been sent.'

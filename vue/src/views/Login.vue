@@ -46,9 +46,9 @@
                                     placeholder="Votre mot de passe" />
                             </div>
                             <p class="mt-4">
-                                <a class="text-sm text-blue-600 hover:underline" href="./forgot-password.html">
+                                <router-link :to="{name:'Forgot'}" class="text-sm text-blue-600 hover:underline" href="./forgot-password.html">
                                     Mot de passe oublié ?
-                                </a>
+                                </router-link>
                             </p>
 
                             <button

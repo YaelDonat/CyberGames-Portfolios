@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Login from "../views/Login.vue";
-import Home from "../views/Home.vue";
 import Register from "../views/Register.vue";
+import Forgot from "../views/Forgot.vue";
+import Home from "../views/Home.vue";
 import Portfolios from "../views/Portfolios.vue";
 import Axel from "../views/Axel.vue";
 import Eric from "../views/Eric.vue";
@@ -51,6 +52,7 @@ const routes = [
         children: [
             { path: '/register', name: 'Register', component: Register},
             { path: '/login', name:'Login', component: Login},
+            { path: '/forgot', name:'Forgot', component: Forgot},
         ]
     },
 ];
