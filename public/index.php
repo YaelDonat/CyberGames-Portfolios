@@ -4,7 +4,7 @@ use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
-header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: https://62b232b94ebdfb34bcf99f69--jolly-profiterole-78de30.netlify.app/*');
 header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
