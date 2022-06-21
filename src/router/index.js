@@ -4,6 +4,7 @@ import Register from "../views/Register.vue";
 import Forgot from "../views/Forgot.vue";
 import Home from "../views/Home.vue";
 import Portfolios from "../views/Portfolios.vue";
+import AllImages from "../views/AllImages.vue";
 import Axel from "../views/Axel.vue";
 import Eric from "../views/Eric.vue";
 import Anojan from "../views/Anojan.vue";
@@ -28,6 +29,7 @@ const routes = [
             {path: '/comments/create', name:'CommentsCreate', component : CommentsShow},
             {path: '/comments/:id', name:'CommentsShow', component : CommentsShow},
             {path: '/contact', name:'Contact', component : Contact},
+            {path: '/allimg', name:'AllImages', component : AllImages},
         ],
     },
 

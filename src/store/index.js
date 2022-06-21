@@ -6,7 +6,7 @@ const store = createStore({
     state: {
         user: {
             data: {id:sessionStorage.getItem('id') ,name : sessionStorage.getItem('name'), email : sessionStorage.getItem('email')},
-            token: sessionStorage.getItem("TOKEN"),
+            token:sessionStorage.getItem("TOKEN"),
         },
         currentComment: {
             loading: false,
