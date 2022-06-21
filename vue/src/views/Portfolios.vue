@@ -74,32 +74,32 @@
 
                     <!-- ====== Cards Section Yael -->
                     <div class="w-full md:w-full xl:w-full px-4 ">
-                        <div class="bg-white rounded-lg overflow-hidden mb-10">
+                        <div class="bg-black rounded-lg overflow-hidden mb-10">
                             <img
                                 src="../assets/images/portfolioY/Aangular.webp"
                                 alt="yael/webp"
-                                class="w-full max-w-[347px] max-h-[347px]"
+                                class="w-full max-w-[386px] max-h-[386px]"
                             />
                             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center bg-[url('https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/102666040/original/28c7201753b249fcb0fb78b2634646ea805a1006/design-you-a-minimalist-wallpaper.png')] dark:bg-[url('https://wallpaperaccess.com/full/568191.png')] bg-cover lg:min-h-[350px] lg:max-h-[450px] md:min-h-[500px] md:max-h-[650px] sm:min-h-[650px] sm:max-h-[650px] h-full">
                                 <h3>
                                     <a
-                                        class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary"
+                                        class="font-semibold text-white text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block"
                                     >
                                         Portfolio de Yaël
                                     </a>
                                 </h3>
                                 <p
-                                    class="text-base text-body-color bg-white rounded-lg  bg-opacity-20 hover:bg-opacity-60 leading-relaxed mb-7"
+                                    class="text-base text-body-color bg-white rounded-lg  bg-opacity-20 hover:bg-[#a90cde6a] leading-relaxed mb-7"
                                 >
                                     Développeur full-stack junior.<br>
                                     Back : Laravel / Symfony/ NodeJs / ExpressJs<br>
-                                    Front : Vue3, Tailwindcss<br>
+                                    Front : Vue3, Tailwindcss, Angular<br>
                                     Php, Javascript, C#, Java<br>
                                     MySQL, MongoDB
                                 </p>
                                 <router-link to="/portfolios/yael">
                                     <a
-                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-white text-body-color font-medium hover:border-violet-500 hover:bg-white hover:text-black hover:bg-opacity-60 transition"
+                                        class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-white text-body-color font-medium hover:border-violet-500 hover:bg-[#a90cde6a] hover:text-white hover:bg-opacity-60 transition"
                                     >
                                         Voir en détail
                                     </a>
