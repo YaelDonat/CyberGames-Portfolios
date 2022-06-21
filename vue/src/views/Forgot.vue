@@ -7,7 +7,7 @@
                     <div class="w-full">
                         <div class="flex justify-center">
                             <img class="mx-auto h-24 w-auto dark:bg-white dark:rounded-full"
-                                src="@/images/others/logoTDS.webp" alt="Workflow" />
+                                src="@/images/Others/logoTDS.webp" alt="Workflow" />
                         </div>
                         <br>
                         <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">

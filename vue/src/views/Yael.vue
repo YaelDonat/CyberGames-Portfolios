@@ -67,7 +67,7 @@
             <!-- Image and name -->
             <div class="flex flex-col justify-start items-center pb-8">
               <div>
-                <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-full ring-2 ring-white object-cover mb-4"  src='@/images/portfolioY/ppcv_yael.webp' alt="me">
+                <img class="inline-block w-52 h-52 xl:h-72 xl:w-72 rounded-full ring-2 ring-white object-cover mb-4"  src='@/images/PortfolioY/ppcv_yael.webp' alt="me">
               </div>
               <div>
                 <h1 class="text-gray-800 text-3xl font-semibold mb-2">DONAT Yaël</h1>

@@ -2,7 +2,7 @@
   <PageComponent title="">
     <div class="text-gray-900 dark:text-white">
 
-      <div class="grid drop-shadow-2xl grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg border-4 border-[#759296]" style="background-image: url('../src/assets/images/Others/landscape.webp');">
+      <div class="grid drop-shadow-2xl grid-cols-1 gap-4 min-h-screen min-w-full bg-cover place-content-center place-items-center rounded-lg border-4 border-[#759296]" style="background-image: url('public/images/Others/landscape.webp');">
 
        <p class="mx-auto  h-fit py-10 px-10 rounded-lg text-6xl text-black font-bold font-zcoolkuaiLe ">
           INNER <br> ‎ ‎ ‎  CHAOS

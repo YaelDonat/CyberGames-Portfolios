@@ -6,7 +6,7 @@ const store = createStore({
     state: {
         user: {
             data: {id:sessionStorage.getItem('id') ,name : sessionStorage.getItem('name'), email : sessionStorage.getItem('email')},
-            token: sessionStorage.getItem("TOKEN"),
+            token: 1//sessionStorage.getItem("TOKEN"),
         },
         currentComment: {
             loading: false,
@@ -31,19 +31,19 @@ const store = createStore({
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
-                mainPicture: '../src/assets/images/PortfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['../src/assets/images/PortfolioY/logo.webp', '../src/assets/images/PortfolioY/logo.webp'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/PortfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['public/images/PortfolioY/logo.webp', 'public/images/PortfolioY/logo.webp'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
             },
             {
                 id: 2, show: 'show2', title: 'BedBoat', done: true, description: 'Pour ce stage ma mission était de faire la maintenance du site, ajouter de nouvelles fonctionnalitées. J\'ai mis en place la connexion par Google / Facebook, les envoies de messages automatiques(sur le site) et des mails aussi. La confirmation du mail, la réinitialisation du mot de passe, la compression des images, les contraintes des formulaires. J\'ai appris beacoup de ce stage et j\'ai renforcé mes connaissances en Symfony, javascript, github, css, linux, gestion de serveur distant en ssh. J\'ai aussi acquis des connaissances en SEO et pour le debugging. Ce stage a été très formateur pour moi je remercie grandement les deux créateurs de BedBoat pour cette expérience unique. Avoir été 2 mois en total "liberté"(seul développeur back de la startup) m\'a beacoup aidé à m\'améliorer, apprendre à gérer mon temps, mes missions, la pression',
-                mainPicture: '../src/assets/images/PortfolioY/logoBedboat.webp', poste: 'Développeur Backend', link: 'https://bedboat.fr/', images: ['../src/assets/images/PortfolioY/unreadMsg.webp', '../src/assets/images/PortfolioY/loginBedboat.webp','../src/assets/images/PortfolioY/loginGoogleBedboat.webp'], outils : ['Symfony','Github','Javascript','VPS-Ubuntu','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/PortfolioY/logoBedboat.webp', poste: 'Développeur Backend', link: 'https://bedboat.fr/', images: ['public/images/PortfolioY/unreadMsg.webp', 'public/images/PortfolioY/loginBedboat.webp','public/images/PortfolioY/loginGoogleBedboat.webp'], outils : ['Symfony','Github','Javascript','VPS-Ubuntu','OVH','MySQL'],duree : '2 mois'
             },
             {
                 id: 3, show: 'show3', title: 'RPG C#', done: true, description: "Projet effectué en binôme sur une durée de 5 jours, le but étant de donner le maximum sur une courte période. On à fait un jeu vidéo fonctionnel de type rogue-like en C#. Nous avons d'abord effectué le projet en console et ensuite nous l'avons adapté à l'interface graphique.",
-                mainPicture: '../src/assets/images/PortfolioY/Csharp_logo.webp', poste: 'Développeur', link: 'https://github.com/Axel-A78/RPGCGUI', images: ['../src/assets/images/PortfolioY/rpgc1.webp','../src/assets/images/PortfolioY/rpgc2.webp','../src/assets/images/PortfolioY/rpgc3.webp','../src/assets/images/PortfolioY/rpgc4.webp','../src/assets/images/PortfolioY/rpgc5.webp',], outils : ['C#','VSCode','Github'],duree : '5 jours'
+                mainPicture: 'public/images/PortfolioY/Csharp_logo.webp', poste: 'Développeur', link: 'https://github.com/Axel-A78/RPGCGUI', images: ['public/images/PortfolioY/rpgc1.webp','public/images/PortfolioY/rpgc2.webp','public/images/PortfolioY/rpgc3.webp','public/images/PortfolioY/rpgc4.webp','public/images/PortfolioY/rpgc5.webp',], outils : ['C#','VSCode','Github'],duree : '5 jours'
             },
             {
                 id: 4, show: 'show4', title: 'Portfolio', done: false, description: 'cccc'
-                , mainPicture: '../src/assets/images/PortfolioY/logo.webp', poste: 'Développeur Fullstack', link: '#', images: ['', ''], outils : ['Vue3Js','Laravel','Tailwindcss','MySQL'],duree : ''
+                , mainPicture: 'public/images/PortfolioY/logo.webp', poste: 'Développeur Fullstack', link: '#', images: ['', ''], outils : ['Vue3Js','Laravel','Tailwindcss','MySQL'],duree : ''
             },
         ],
         userEric: {
@@ -53,16 +53,16 @@ const store = createStore({
         portfolioE:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
-                mainPicture: '../src/assets/images/PortfolioY/budokan-Logo.png', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['../src/assets/images/logo.png', '../src/assets/images/logo.png'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/PortfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['public/images/logo.png', 'public/images/logo.png'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
             }
         ],
         gameImage:[
-            {slug:'menu_principal',title :'Menu principal' ,name : '../src/assets/images/gamePics/mainMenuGame.png'},
-            {slug:'carte',title :'Carte' ,name : '../src/assets/images/gamePics/GameMap.png'},
-            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
-            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
-            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
-            {slug:'boutique',title :'Boutique' ,name : '../src/assets/images/gamePics/GameShop.png'},
+            {slug:'menu_principal',title :'Menu principal' ,name : 'public/images/gamePics/mainMenuGame.webp'},
+            {slug:'carte',title :'Carte' ,name : 'public/images/gamePics/GameMap.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
         ]
     },
 
