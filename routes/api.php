@@ -28,6 +28,6 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::resource('/comments',CommentsController::class);
 Route::resource('/ratings', RatingsController::class);
 Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login']); 
 
 
