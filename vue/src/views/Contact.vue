@@ -9,7 +9,7 @@
                             <div class="w-full">
                                 <div class="flex justify-center">
                                     <img class="mx-auto h-24 w-auto dark:bg-white dark:rounded-full"
-                                        src="~@/assets/images/others/logoTDS.webp" alt="Workflow" />
+                                        src="@/images/others/logoTDS.webp" alt="Workflow" />
                                 </div>
                                 <br>
                                 <h1 class="mb-4 text-2xl font-bold text-center text-gray-900">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="h-32 md:h-auto md:w-1/2">
                             <img class="object-cover w-full h-full rounded-r-lg "
-                                src="~@/assets/images/Others/contact.webp" alt="img" />
+                                src="@/images/Others/contact.webp" alt="img" />
                         </div>
                     </div>
                 </div>

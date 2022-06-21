@@ -43,7 +43,7 @@
                     <div class="w-full md:w-full xl:w-full px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="~@/assets/images/portfolioE/Minimalist_Eric.png"
+                                src="@/images/portfolioE/Minimalist_Eric.png"
                                 alt="image"
                                 class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
@@ -76,7 +76,7 @@
                     <div class="w-full md:w-full xl:w-full px-4 ">
                         <div class="bg-black rounded-lg overflow-hidden mb-10">
                             <img
-                                src="~@/assets/images/portfolioY/Aangular.webp"
+                                src="@/images/portfolioY/Aangular.webp"
                                 alt="yael/webp"
                                 class="w-full max-w-[386px] max-h-[386px]"
                             />
