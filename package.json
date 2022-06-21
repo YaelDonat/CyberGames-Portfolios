@@ -19,5 +19,9 @@
         "sass-loader": "^13.0.0",
         "style-loader": "^3.3.1"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 775 public/"
+    ]
 }
