@@ -1,5 +1,5 @@
 <template>
-   <PageComponent title="Portfolio de l'équipe">
+   <PageComponent title="portfolio de l'équipe">
        <main>
         <!-- ====== Cards Section Start -->
         <section class="pt-20 lg:pt-[60px] rounded-lg pb-10 lg:pb-20 bg-slate-300 dark:bg-zinc-800 min-h-screen">
@@ -43,7 +43,7 @@
                     <div class="w-full md:w-full xl:w-full px-4">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                             <img
-                                src="@/images/PortfolioE/Minimalist_Eric.png"
+                                src="@/images/portfolioE/minimalist_eric.png"
                                 alt="image"
                                 class="w-full max-w-[443.75px] max-h-[443.75px]"
                             />
@@ -76,7 +76,7 @@
                     <div class="w-full md:w-full xl:w-full px-4 ">
                         <div class="bg-black rounded-lg overflow-hidden mb-10">
                             <img
-                                src="@/images/PortfolioY/Aangular.webp"
+                                src="@/images/portfolioY/Aangular.webp"
                                 alt="yael/webp"
                                 class="w-full max-w-[386px] max-h-[386px]"
                             />
