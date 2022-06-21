@@ -6,7 +6,7 @@
   <div class="bg-slate-400 shadow dark:bg-slate-700 p-8 hover:shadow-xl transition text-center">
     <h2 class="text-slate-600"><i class="mr-2"></i><bold class="bg-slate-100 dark:bg-slate-800 dark:text-slate-100 rounded-md px-4 py-1 text-3xl">Anojan Yogeswaran</bold></h2>
     <div class="flex items-center justify-center">
-      <img class="p-4 rounded-full h-72" src="../assets/images/portfolioA/photoAnojan.jpg" alt="">
+      <img class="p-4 rounded-full h-72" src="~@/assets/images/portfolioA/photoAnojan.jpg" alt="">
     </div>
     <p class="p-4 text-center italic text-slate-600 dark:text-slate-400">Développeur full-stack junior</p>
   <div class="border border-slate-600 bg-slate-300 dark:bg-slate-800 dark:text-gray-300 shadow m-2 p-4 rounded-xl hover:shadow-xl transition md:mx-24">

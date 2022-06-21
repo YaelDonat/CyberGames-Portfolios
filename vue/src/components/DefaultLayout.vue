@@ -5,7 +5,7 @@
         <div class="flex items-center justify-center h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="h-8 w-8" src="../assets/images/others/logoTDS.webp" alt="Workflow" />
+              <img class="h-8 w-8" src='~@/assets/images/others/logoTDS.webp' alt="Workflow" />
             </div>
             <div class="flex-shrink-0 ml-5">
               <Button @click="isDark = !isDark" class="bg-zinc-800 dark:bg-slate-300 hover:bg-opacity-40 rounded-full">
