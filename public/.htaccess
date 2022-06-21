@@ -19,3 +19,7 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule "^(.*)$ public/$1" [L]
 </IfModule>
+
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
