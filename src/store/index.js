@@ -31,19 +31,19 @@ const store = createStore({
         portfolioY:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
-                mainPicture: '@/images/portfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['@/images/portfolioY/logo.webp', '@/images/portfolioY/logo.webp'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/portfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['public/images/portfolioY/logo.webp', 'public/images/portfolioY/logo.webp'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
             },
             {
                 id: 2, show: 'show2', title: 'BedBoat', done: true, description: 'Pour ce stage ma mission était de faire la maintenance du site, ajouter de nouvelles fonctionnalitées. J\'ai mis en place la connexion par Google / Facebook, les envoies de messages automatiques(sur le site) et des mails aussi. La confirmation du mail, la réinitialisation du mot de passe, la compression des images, les contraintes des formulaires. J\'ai appris beacoup de ce stage et j\'ai renforcé mes connaissances en Symfony, javascript, github, css, linux, gestion de serveur distant en ssh. J\'ai aussi acquis des connaissances en SEO et pour le debugging. Ce stage a été très formateur pour moi je remercie grandement les deux créateurs de BedBoat pour cette expérience unique. Avoir été 2 mois en total "liberté"(seul développeur back de la startup) m\'a beacoup aidé à m\'améliorer, apprendre à gérer mon temps, mes missions, la pression',
-                mainPicture: '@/images/portfolioY/logoBedboat.webp', poste: 'Développeur Backend', link: 'https://bedboat.fr/', images: ['@/images/portfolioY/unreadMsg.webp', '@/images/portfolioY/loginBedboat.webp','@/images/portfolioY/loginGoogleBedboat.webp'], outils : ['Symfony','Github','Javascript','VPS-Ubuntu','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/portfolioY/logoBedboat.webp', poste: 'Développeur Backend', link: 'https://bedboat.fr/', images: ['public/images/portfolioY/unreadMsg.webp', 'public/images/portfolioY/loginBedboat.webp','public/images/portfolioY/loginGoogleBedboat.webp'], outils : ['Symfony','Github','Javascript','VPS-Ubuntu','OVH','MySQL'],duree : '2 mois'
             },
             {
                 id: 3, show: 'show3', title: 'RPG C#', done: true, description: "Projet effectué en binôme sur une durée de 5 jours, le but étant de donner le maximum sur une courte période. On à fait un jeu vidéo fonctionnel de type rogue-like en C#. Nous avons d'abord effectué le projet en console et ensuite nous l'avons adapté à l'interface graphique.",
-                mainPicture: '@/images/portfolioY/Csharp_logo.webp', poste: 'Développeur', link: 'https://github.com/Axel-A78/RPGCGUI', images: ['@/images/portfolioY/rpgc1.webp','@/images/portfolioY/rpgc2.webp','@/images/portfolioY/rpgc3.webp','@/images/portfolioY/rpgc4.webp','@/images/portfolioY/rpgc5.webp',], outils : ['C#','VSCode','Github'],duree : '5 jours'
+                mainPicture: 'public/images/portfolioY/Csharp_logo.webp', poste: 'Développeur', link: 'https://github.com/Axel-A78/RPGCGUI', images: ['public/images/portfolioY/rpgc1.webp','public/images/portfolioY/rpgc2.webp','public/images/portfolioY/rpgc3.webp','public/images/portfolioY/rpgc4.webp','public/images/portfolioY/rpgc5.webp',], outils : ['C#','VSCode','Github'],duree : '5 jours'
             },
             {
                 id: 4, show: 'show4', title: 'Portfolio', done: false, description: 'cccc'
-                , mainPicture: '@/images/portfolioY/logo.webp', poste: 'Développeur Fullstack', link: '#', images: ['', ''], outils : ['Vue3Js','Laravel','Tailwindcss','MySQL'],duree : ''
+                , mainPicture: 'public/images/portfolioY/logo.webp', poste: 'Développeur Fullstack', link: '#', images: ['', ''], outils : ['Vue3Js','Laravel','Tailwindcss','MySQL'],duree : ''
             },
         ],
         userEric: {
@@ -53,16 +53,16 @@ const store = createStore({
         portfolioE:[
             {
                 id: 1, show: 'show1', title: 'Budokan', done: true, description: 'Refonte complète du site pour une association sportive. Effectué en équipe de 6. 2 Front, 2 Back et 2 Full-stack. Premier stage fait, très formateur. On a appris Laravel en autodidacte, grâce aux documentations et aux vidéos de Laracast.',
-                mainPicture: '@/images/portfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['@/images/logo.png', '@/images/logo.png'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
+                mainPicture: 'public/images/portfolioY/budokan-Logo.webp', poste: 'Développeur Fullstack', link: 'http://budokanthiais.fr/', images: ['public/images/logo.png', 'public/images/logo.png'], outils : ['Laravel','Bootstrap','OVH','MySQL'],duree : '2 mois'
             }
         ],
         gameImage:[
-            {slug:'menu_principal',title :'Menu principal' ,name : '@/images/gamePics/mainMenuGame.webp'},
-            {slug:'carte',title :'Carte' ,name : '@/images/gamePics/GameMap.webp'},
-            {slug:'boutique',title :'Boutique' ,name : '@/images/gamePics/GameShop.webp'},
-            {slug:'boutique',title :'Boutique' ,name : '@/images/gamePics/GameShop.webp'},
-            {slug:'boutique',title :'Boutique' ,name : '@/images/gamePics/GameShop.webp'},
-            {slug:'boutique',title :'Boutique' ,name : '@/images/gamePics/GameShop.webp'},
+            {slug:'menu_principal',title :'Menu principal' ,name : 'public/images/gamePics/mainMenuGame.webp'},
+            {slug:'carte',title :'Carte' ,name : 'public/images/gamePics/GameMap.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
+            {slug:'boutique',title :'Boutique' ,name : 'public/images/gamePics/GameShop.webp'},
         ]
     },
 
