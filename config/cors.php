@@ -37,7 +37,7 @@ return [
         'Authorization',
     ],
 
-    'exposed_headers' => [],
+    'exposed_headers' => ['Access-Control-Allow-Origin'],
 
     'max_age' => 60 * 60 * 24,
 
